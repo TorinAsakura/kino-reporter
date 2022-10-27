@@ -1,0 +1,19 @@
+{
+  "name": "@site/index-page",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.tsx",
+  "dependencies": {
+    "@ui/layout": "workspace:0.0.1"
+  },
+  "devDependencies": {
+    "next": "12.1.0",
+    "react": "18.2.0",
+    "react-intl": "5.24.3"
+  },
+  "peerDependencies": {
+    "next": "*",
+    "react": "*",
+    "react-intl": "*"
+  }
+}
