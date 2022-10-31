@@ -9,12 +9,14 @@ import { LinkProps }               from './link.interfaces'
 import { BaseLinkProps }           from './link.interfaces'
 import { shapeLinkStyles }         from './link.styles'
 import { activeNavLinkStyles }     from './next-nav-link.styles'
+import { transitionStyles }        from './next-nav-link.styles'
 import { appearanceNavLinkStyles } from './next-nav-link.styles'
 import { defaultNavLinkStyles }    from './next-nav-link.styles'
 
 const NextNavLinkStyles = styled(Link)<BaseLinkProps>(
   createBaseStyles(),
   shapeLinkStyles,
+  transitionStyles,
   appearanceNavLinkStyles,
   activeNavLinkStyles,
   defaultNavLinkStyles

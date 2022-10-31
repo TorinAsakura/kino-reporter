@@ -1,7 +1,7 @@
 import { styleFn } from 'styled-system'
 
 export const transitionStyles: styleFn = () => ({
-  transition: 0.3,
+  transition: '.3s',
 })
 
 export const appearanceLinkStyles: styleFn = ({ theme, keep }) =>
@@ -9,6 +9,9 @@ export const appearanceLinkStyles: styleFn = ({ theme, keep }) =>
     color: theme.colors.links.secondary.default.font,
     '&:hover': {
       color: theme.colors.links.secondary.hover.font,
+      '& svg > path:only-of-type': {
+        fill: theme.colors.links.secondary.hover.font,
+      },
     },
     '&:active': {
       color: theme.colors.links.secondary.pressed.font,
@@ -16,7 +19,7 @@ export const appearanceLinkStyles: styleFn = ({ theme, keep }) =>
   }
 
 export const shapeLinkStyles: styleFn = ({ theme }) => ({
-  fontSize: theme.fontSizes.tiny,
+  fontSize: theme.fontSizes.semiRegular,
   fontFamily: theme.fonts.primary,
   whiteSpace: 'nowrap',
 })

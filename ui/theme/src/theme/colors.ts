@@ -2,6 +2,10 @@ const colors = {
   iceCube: 'rgba(255, 255, 255, 0.2)',
   accent: 'rgba(224, 29, 81, 1)',
   semiBlack: 'rgba(0, 0, 0, 0.5)',
+  lightBlack: 'rgba(10, 10, 11, 0.08)',
+  lightGray: 'rgba(10, 10, 11, 0.04)',
+  lightWhite: 'rgba(255, 255, 255, 0.15)',
+  lightRed: 'rgba(224, 29, 81, 0.1)',
   background: {
     white: 'rgba(255, 255, 255, 1)',
     dark: 'rgba(45, 45, 55, 1)',

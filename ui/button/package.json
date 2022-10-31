@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@atls-ui-generators/button": "0.0.10",
-    "@atls-ui-parts/button": "^0.0.7",
+    "@atls-ui-parts/button": "^0.0.10",
     "@atls-ui-parts/styles": "^0.0.4",
     "@ui/utils": "workspace:0.0.1",
     "styled-system": "^5.1.5",

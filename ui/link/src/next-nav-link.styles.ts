@@ -1,5 +1,9 @@
 import { styleFn } from 'styled-system'
 
+export const transitionStyles: styleFn = () => ({
+  transition: '.3s',
+})
+
 export const appearanceNavLinkStyles: styleFn = ({ theme, keep }) =>
   !keep && {
     color: theme.colors.links.secondary.default.font,
@@ -9,7 +13,6 @@ export const appearanceNavLinkStyles: styleFn = ({ theme, keep }) =>
       color: theme.colors.links.secondary.hover.font,
       backgroundColor: theme.colors.links.secondary.hover.background,
       borderRadius: theme.radii.intermediate,
-      transition: '0.35s',
     },
   }
 
@@ -20,9 +23,7 @@ export const activeNavLinkStyles: styleFn = ({ active, theme }) =>
       color: theme.colors.links.secondary.active.font,
       backgroundColor: theme.colors.links.secondary.active.background,
       borderRadius: theme.radii.intermediate,
-      transition: '0.35s',
     },
-
     '& svg > path:only-of-type': {
       fill: theme.colors.links.secondary.active.font,
     },
@@ -33,8 +34,7 @@ export const defaultNavLinkStyles: styleFn = ({ active, theme }) =>
     color: theme.colors.links.secondary.default.font,
     '&:hover': {
       backgroundColor: theme.colors.links.secondary.hover.background,
-      color: theme.colors.links.secondary.default.font,
+      color: theme.colors.links.secondary.hover.font,
       borderRadius: theme.radii.intermediate,
-      transition: '0.35s',
     },
   }
