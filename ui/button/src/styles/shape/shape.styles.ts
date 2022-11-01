@@ -3,6 +3,7 @@ import { switchProp }          from 'styled-tools'
 import { prop }                from 'styled-tools'
 
 import { getBigSizeStyles }    from './abstract'
+import { getGhostStyles }      from './abstract'
 import { getMicroSizeStyles }  from './abstract'
 import { getTinySizeStyles }   from './abstract'
 import { getSmallSizeStyles }  from './abstract'
@@ -14,6 +15,7 @@ const getShapeStyles = (theme): styleFn => {
   const tinySizeStyles = getTinySizeStyles(theme)
   const microSizeStyles = getMicroSizeStyles(theme)
   const bigSizeStyles = getBigSizeStyles(theme)
+  const ghostSizeStyles = getGhostStyles()
 
   return switchProp(prop('size', 'normal'), {
     big: bigSizeStyles,
@@ -21,6 +23,7 @@ const getShapeStyles = (theme): styleFn => {
     small: smallSizeStyles,
     tiny: tinySizeStyles,
     micro: microSizeStyles,
+    ghost: ghostSizeStyles,
   })
 }
 

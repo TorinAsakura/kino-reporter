@@ -6,7 +6,7 @@ const getSmallSizeStyles = (theme): styleFn => {
   const smallSizeStyles = createShapeStyles({
     size: 40,
     fontSize: theme.fontSizes.small,
-    rounding: theme.radii.voluminous,
+    rounding: theme.radii.intermediate,
     fontWeight: theme.fontWeights.medium,
     fontFamily: theme.fonts.primary,
     paddingRight: 16,

@@ -4,7 +4,9 @@
   "license": "BSD 3-Clause",
   "workspaces": [
     "site/**/*",
-    "ui/**/*"
+    "ui/**/*",
+    "globals/**/*",
+    "shared/**/*"
   ],
   "scripts": {
     "postinstall": "yarn workspace @ui/icons generate-icons"

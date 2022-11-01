@@ -1,5 +1,8 @@
 const colors = {
+  primary: 'rgba(10, 10, 11, 1)',
+  tertiary: 'rgba(172, 173, 183, 1)',
   iceCube: 'rgba(255, 255, 255, 0.2)',
+  inverseSecondary: 'rgba(255, 255, 255, 0.65)',
   accent: 'rgba(224, 29, 81, 1)',
   semiBlack: 'rgba(0, 0, 0, 0.5)',
   lightBlack: 'rgba(10, 10, 11, 0.08)',
@@ -13,6 +16,7 @@ const colors = {
   },
   text: {
     primary: 'rgba(10, 10, 11, 1)',
+    lightPrimary: 'rgba(10, 10, 11, 0.35)',
     secondary: 'rgba(117, 118, 130, 1)',
     tertiary: 'rgba(172, 173, 183, 1)',
     inverseSecondary: 'rgba(255, 255, 255, 0.65)',
@@ -163,6 +167,37 @@ const colors = {
         font: 'rgba(255, 255, 255, 1)',
         border: 'transparent',
       },
+    },
+  },
+  input: {
+    primary: {
+      default: {
+        background: 'rgba(10, 10, 11, 0.04)',
+        border: 'transparent',
+        fontColor: 'rgba(10, 10, 11, 1)',
+      },
+      hover: {
+        background: 'rgba(10, 10, 11, 0.04)',
+        border: 'transparent',
+        font: 'rgba(10, 10, 11, 1)',
+      },
+      pressed: {
+        background: 'rgba(10, 10, 11, 0.04)',
+        border: 'transparent',
+        font: 'rgba(10, 10, 11, 1)',
+      },
+      focus: {
+        background: 'rgba(10, 10, 11, 0.04)',
+        border: 'transparent',
+        font: 'rgba(10, 10, 11, 1)',
+      },
+      disabled: {
+        background: 'rgba(247, 247, 247, 1)',
+        border: 'rgba(247, 247, 247, 1)',
+        font: 'rgba(195, 195, 195, 1)',
+        label: 'rgba(128, 128, 128, 1)',
+      },
+      error: 'rgba(213, 52, 52, 1)',
     },
   },
   button: {

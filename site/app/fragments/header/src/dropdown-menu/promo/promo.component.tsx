@@ -13,8 +13,8 @@ import { Text }              from '@ui/text'
 
 const Promo: FC = () => (
   <Box
-    width={405}
-    height={160}
+    width={[343, 343, 405]}
+    height={[120, 120, 160]}
     zIndex={20}
     position='relative'
     backgroundColor='background.lightGray'
@@ -38,8 +38,25 @@ const Promo: FC = () => (
           </Row>
           <Layout flexBasis={16} />
         </Column>
-        <Box position='absolute' top={-60} right={-60} zIndex={-1}>
+        <Box
+          position='absolute'
+          top={-60}
+          right={-60}
+          zIndex={-1}
+          display={['none', 'none', 'flex']}
+        >
           <ImageBlock width={310} height={232} src={KinoReporterImage} />
+        </Box>
+        <Box
+          width={232}
+          height={174}
+          position='absolute'
+          top={-45}
+          right={-40}
+          zIndex={-1}
+          display={['flex', 'flex', 'none']}
+        >
+          <ImageBlock width={232} height={174} src={KinoReporterImage} />
         </Box>
         <Layout flexBasis={15} />
       </Layout>

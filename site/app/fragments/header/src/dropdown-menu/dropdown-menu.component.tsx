@@ -2,6 +2,7 @@ import React                  from 'react'
 import { FC }                 from 'react'
 import { FormattedMessage }   from 'react-intl'
 
+import { Button }             from '@ui/button'
 import { Divider }            from '@ui/divider'
 import { ArrowRightIcon }     from '@ui/icons'
 import { Box }                from '@ui/layout'
@@ -19,12 +20,17 @@ const DropdownMenu: FC = () => {
 
   return (
     <Box justifyContent='center' backgroundColor='white' borderRadius='bottomSide'>
-      <Box justifyContent='center' maxWidth={1440} width='100%'>
-        <Layout flexBasis={80} />
-        <Column fill width='100%' maxWidth={624}>
-          <Layout flexBasis={32} />
+      <Box
+        justifyContent='center'
+        maxWidth={1440}
+        width='100%'
+        height={['calc(100vh - 64px)', 'calc(100vh - 64px)', 'auto']}
+      >
+        <Layout flexBasis={[16, 16, 80]} flexShrink={0} />
+        <Column fill maxWidth={624}>
+          <Layout flexBasis={[24, 24, 32]} flexShrink={0} />
           <Column>
-            <Column>
+            <Column height='auto'>
               {links.data.drawer.map(({ title, path }, index) => (
                 <React.Fragment key={title}>
                   <NextLink path={path}>
@@ -33,7 +39,7 @@ const DropdownMenu: FC = () => {
                         <Text
                           fontWeight='medium'
                           fontFamily='lora'
-                          fontSize='big'
+                          fontSize={['xl', 'xl', 'big']}
                           lineHeight='compact'
                         >
                           {title}
@@ -49,12 +55,15 @@ const DropdownMenu: FC = () => {
                 </React.Fragment>
               ))}
             </Column>
-            <Layout flexBasis={110} />
-            <Layout>
+            <Layout flexBasis={[0, 0, 110]} flexGrow={[1, 1, 0]} />
+            <Layout display={['flex', 'flex', 'none']}>
+              <Promo />
+            </Layout>
+            <Layout display={['none', 'none', 'flex']}>
               <Divider backgroundColor='lightBlack' />
             </Layout>
-            <Layout flexBasis={24} />
-            <Row>
+            <Layout flexBasis={[16, 16, 24]} />
+            <Row display={['none', 'none', 'flex']}>
               <Layout>
                 <NextLink path='/'>
                   <Text fontFamily='lora' fontSize='semiLarge' lineHeight='extra'>
@@ -72,14 +81,27 @@ const DropdownMenu: FC = () => {
               </Layout>
             </Row>
           </Column>
-          <Layout flexBasis={24} />
+          <Row display={['flex', 'flex', 'none']}>
+            <Row>
+              <Button variant='secondary' size='small'>
+                <Text>О нас</Text>
+              </Button>
+            </Row>
+            <Layout flexBasis={16} flexShrink={0} />
+            <Row>
+              <Button variant='secondary' size='small'>
+                <Text>Контакты</Text>
+              </Button>
+            </Row>
+          </Row>
+          <Layout flexBasis={[16, 16, 24]} flexShrink={0} />
         </Column>
-        <Layout flexGrow={1} />
-        <Column>
+        <Layout display={['none', 'none', 'flex']} flexGrow={[0, 0, 1]} />
+        <Column display={['none', 'none', 'flex']}>
           <Layout flexBasis={32} />
           <Promo />
         </Column>
-        <Layout flexBasis={80} />
+        <Layout flexBasis={[16, 16, 80]} flexShrink={0} />
       </Box>
     </Box>
   )

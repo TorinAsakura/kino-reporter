@@ -4,17 +4,24 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
+    "@app/store": "workspace:0.0.1",
+    "@globals/data": "workspace:0.0.1",
+    "@ui/avatar": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/divider": "workspace:0.0.1",
     "@ui/drawer": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
     "@ui/image": "workspace:0.0.1",
+    "@ui/input": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/link": "workspace:0.0.1",
-    "@ui/text": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1",
+    "framer-motion": "^7.6.2"
   },
   "devDependencies": {
+    "@apollo/client": "^3.6.9",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@types/styled-system": "^5",
@@ -24,6 +31,7 @@
     "react-intl": "5.24.3"
   },
   "peerDependencies": {
+    "@apollo/client": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "next": "*",
