@@ -29,7 +29,7 @@ type ButtonColors =
   | 'social'
 
 export interface ButtonProps extends BaseButtonProps, LayoutProps, SpaceProps {
-  color?: ButtonColors
+  variant?: ButtonColors
   width?: number | string | number[] | string[]
   height?: number | string | number[] | string[]
 }

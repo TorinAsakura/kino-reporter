@@ -35,7 +35,7 @@ const SearchPopup: FC = () => {
       <Layout flexBasis={24} flexShrink={0} />
       <Column fill>
         <Layout flexBasis={24} />
-        <Condition match={searchHistory.length}>
+        <Condition match={!!searchHistory.length}>
           {searchHistory.map((title, index) => (
             <Column key={title} width='100%' height='auto'>
               <SearchHistory title={title} />

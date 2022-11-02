@@ -23,7 +23,7 @@ const Drawer: FC<DrawerProps> = ({ children, top, mobileTop, active, onClose }) 
       <motion.div
         style={{ position: 'fixed', left: 0, top: 0, width: '100%', zIndex: 900 }}
         initial={{ top: '-100%' }}
-        animate={{ top: top }}
+        animate={{ top }}
         exit={{ top: '-100%' }}
         transition={{ duration: 0.5 }}
       >

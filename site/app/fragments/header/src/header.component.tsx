@@ -47,8 +47,9 @@ const Header: FC<HeaderProps> = ({ transparent = false }) => {
 
   const inputLayoutRef = useRef<HTMLDivElement | null>(null)
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    setPopupWidth(inputLayoutRef.current.clientWidth)
+    setPopupWidth(inputLayoutRef!.current!.clientWidth)
   })
 
   const handleKeyPress = (event) => {
