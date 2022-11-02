@@ -24,8 +24,8 @@ const MenuButton: FC<MenuButtonProps> = ({ transparent, activeDrawer, setActiveD
           <svg width='24' height='24' viewBox='0 0 24 24'>
             <Path
               variants={{
-                closed: { d: 'M 22 4.5 L 3 4.5', stroke: 'black' },
-                open: { d: 'M 21.346 21.346 L 3 3.5', stroke: 'red' },
+                closed: { d: 'M 3 4.5 L 22 4.5', stroke: 'black' },
+                open: { d: 'M 3 3.5 L 21.346 21.346', stroke: 'red' },
               }}
             />
             <Path
@@ -38,8 +38,8 @@ const MenuButton: FC<MenuButtonProps> = ({ transparent, activeDrawer, setActiveD
             />
             <Path
               variants={{
-                closed: { d: 'M 22 18.346 L 2.5 18.346', stroke: 'black' },
-                open: { d: 'M 21.346 3.5 L 3 21.346', stroke: 'red' },
+                closed: { d: 'M 2.5 18.346 L 22 18.346', stroke: 'black' },
+                open: { d: 'M 3 21.346 L 21.346 3.5', stroke: 'red' },
               }}
             />
           </svg>

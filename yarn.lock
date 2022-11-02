@@ -181,6 +181,7 @@ __metadata:
     "@emotion/react": ^11.10.0
     "@emotion/styled": ^11.10.0
     "@globals/data": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
     "@types/styled-system": ^5
     "@ui/avatar": "workspace:0.0.1"
     "@ui/button": "workspace:0.0.1"
@@ -1865,6 +1866,9 @@ __metadata:
 "@shared/utils@workspace:0.0.1, @shared/utils@workspace:shared/utils":
   version: 0.0.0-use.local
   resolution: "@shared/utils@workspace:shared/utils"
+  dependencies:
+    "@types/luxon": ^2
+    luxon: ^2.4.0
   languageName: unknown
   linkType: soft
 
@@ -2416,6 +2420,13 @@ __metadata:
   version: 4.14.186
   resolution: "@types/lodash@npm:4.14.186"
   checksum: ee0c1368a8100bb6efb88335107473a41928fc307ff1ef4ff1278868ccddba9c04c68c36d1ffe3a0392ef4a956e1955f7de3203ec09df4f1655dd1b88485c549
+  languageName: node
+  linkType: hard
+
+"@types/luxon@npm:^2":
+  version: 2.4.0
+  resolution: "@types/luxon@npm:2.4.0"
+  checksum: eeb16a1bfe5440464c1a9635700d103cd18d3cd8da6063a1938478e435cfba6ab8e893aa80c95a407e541187c1e997c3e4481322726bc1258551cb8606d0e5ad
   languageName: node
   linkType: hard
 
@@ -6675,6 +6686,13 @@ __metadata:
   version: 7.14.0
   resolution: "lru-cache@npm:7.14.0"
   checksum: efdd329f2c1bb790b71d497c6c59272e6bc2d7dd060ba55fc136becd3dd31fc8346edb446275504d94cb60d3c8385dbf5267b79b23789e409b2bdf302d13f0d7
+  languageName: node
+  linkType: hard
+
+"luxon@npm:^2.4.0":
+  version: 2.5.0
+  resolution: "luxon@npm:2.5.0"
+  checksum: 2fccce6bbdfc8f13c5a8c148ff045ab3b10f4f80cac28dd92575588fffce9b2d7197096d7fedcc61a6245b59f4233507797f530e63f22b9ae4c425dff2909ae3
   languageName: node
   linkType: hard
 

@@ -1,45 +1,42 @@
-import React                   from 'react'
-import { FC }                  from 'react'
-import { motion }              from 'framer-motion'
-import { useEffect }           from 'react'
-import { useRef }              from 'react'
-import { useState }            from 'react'
-import { useIntl }             from 'react-intl'
+import React                       from 'react'
+import { FC }                      from 'react'
+import { useEffect }               from 'react'
+import { useRef }                  from 'react'
+import { useState }                from 'react'
+import { useIntl }                 from 'react-intl'
 
-import { Avatar }              from '@ui/avatar'
-import { GhostButton }         from '@ui/button'
-import { Drawer }              from '@ui/drawer'
-import { LogoIcon }            from '@ui/icons'
-import { SearchSecondaryIcon } from '@ui/icons'
-import { Input }               from '@ui/input'
-import { Box }                 from '@ui/layout'
-import { Column }              from '@ui/layout'
-import { Layout }              from '@ui/layout'
-import { Row }                 from '@ui/layout'
-import { addSearchHistory }    from '@app/store'
-import { useSearchHistory }    from '@app/store'
-import { useMockedUser }       from '@globals/data'
-import { usePopover }          from '@ui/utils'
+import { Avatar }                  from '@ui/avatar'
+import { GhostButton }             from '@ui/button'
+import { Drawer }                  from '@ui/drawer'
+import { LogoIcon }                from '@ui/icons'
+import { SearchSecondaryIcon }     from '@ui/icons'
+import { Input }                   from '@ui/input'
+import { Box }                     from '@ui/layout'
+import { Column }                  from '@ui/layout'
+import { Layout }                  from '@ui/layout'
+import { Row }                     from '@ui/layout'
+import { addSearchHistoryAction }  from '@app/store'
+import { updateSearchValueAction } from '@app/store'
+import { useSearchValue }          from '@app/store'
+import { useSearchHistory }        from '@app/store'
+import { useMockedUser }           from '@globals/data'
+import { usePopover }              from '@ui/utils'
 
-import { DropdownMenu }        from './dropdown-menu'
-import { HeaderProps }         from './header.interface'
-import { MenuButton }          from './menu-button'
-import { NavigationList }      from './navigation-list'
-import { SearchPopup }         from './search-popup'
-
-const MotionBox = Box.withComponent(motion.div)
+import { DropdownMenu }            from './dropdown-menu'
+import { HeaderProps }             from './header.interface'
+import { MenuButton }              from './menu-button'
+import { NavigationList }          from './navigation-list'
+import { SearchPopup }             from './search-popup'
+import { MotionBox }               from './styles'
 
 const Header: FC<HeaderProps> = ({ transparent = false }) => {
   const intl = useIntl()
 
   const searchHistory = useSearchHistory()
+  const searchValue = useSearchValue()
 
-  const { triggerProps, layerProps, setOpen, isOpen, render } = usePopover(
-    'bottom-center',
-    8,
-    'click'
-  )
-  const [searchValue, setSearchValue] = useState<string>('')
+  const { triggerProps, layerProps, setOpen, render } = usePopover('bottom-center', 8, 'click')
+
   const [activeDrawer, setActiveDrawer] = useState<boolean>(false)
   const [popupWidth, setPopupWidth] = useState<number>(0)
 
@@ -54,7 +51,7 @@ const Header: FC<HeaderProps> = ({ transparent = false }) => {
 
   const handleKeyPress = (event) => {
     if (event.key === 'Enter') {
-      addSearchHistory(searchHistory, searchValue)
+      addSearchHistoryAction(searchHistory, searchValue)
     }
   }
 
@@ -68,7 +65,7 @@ const Header: FC<HeaderProps> = ({ transparent = false }) => {
     >
       <Layout flexBasis={[16, 16, 80]} flexShrink={0} />
       <Column fill>
-        <Layout flexBasis={[16, 16, 24]} flexShrink={0} />
+        <Layout flexBasis={[16, 16, 20]} flexShrink={0} />
         <Row justifyContent={['flex-start', 'flex-start', 'center']}>
           <Layout>
             <MotionBox display='flex' initial={false} animate={activeDrawer ? 'open' : 'closed'}>
@@ -101,7 +98,7 @@ const Header: FC<HeaderProps> = ({ transparent = false }) => {
           <Layout flexBasis={[0, 0, 89.5]} />
           <Layout
             ref={inputLayoutRef}
-            onClick={() => setOpen(!isOpen)}
+            onClick={() => setOpen(true)}
             width='100%'
             maxWidth={360}
             display={['none', 'none', 'flex']}
@@ -110,7 +107,7 @@ const Header: FC<HeaderProps> = ({ transparent = false }) => {
               <Input
                 type='search'
                 value={searchValue}
-                onChange={setSearchValue}
+                onChange={updateSearchValueAction}
                 onKeyPress={handleKeyPress}
                 placeholder={intl.formatMessage({
                   id: 'header.materials_films_persons',
@@ -120,9 +117,21 @@ const Header: FC<HeaderProps> = ({ transparent = false }) => {
             </Layout>
           </Layout>
           {render(
-            <Box width='100%' maxWidth={popupWidth} zIndex={951} {...layerProps}>
+            <MotionBox
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                type: 'spring',
+                stiffness: 400,
+                damping: 40,
+              }}
+              width='100%'
+              maxWidth={popupWidth}
+              zIndex={951}
+              {...layerProps}
+            >
               <SearchPopup />
-            </Box>
+            </MotionBox>
           )}
           <Layout flexBasis={[24, 24, 0]} flexShrink={0} flexGrow={[1, 1, 0]} />
           <Row justifyContent='center' display={['flex', 'flex', 'none']} width={32} height={32}>
@@ -135,7 +144,7 @@ const Header: FC<HeaderProps> = ({ transparent = false }) => {
             <Avatar imageUrl={user.imageUrl} width={[32, 32, 40]} height={[32, 32, 40]} />
           </Layout>
         </Row>
-        <Layout flexBasis={[16, 16, 24]} flexShrink={0} />
+        <Layout flexBasis={[16, 16, 20]} flexShrink={0} />
       </Column>
       <Layout flexBasis={[16, 16, 90]} flexShrink={0} />
     </Box>

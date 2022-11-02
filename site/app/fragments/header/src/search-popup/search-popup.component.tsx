@@ -1,28 +1,31 @@
-import React                   from 'react'
-import { FC }                  from 'react'
-import { FormattedMessage }    from 'react-intl'
-import { useEffect }           from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { useEffect }                 from 'react'
 
-import { Condition }           from '@ui/condition'
-import { Divider }             from '@ui/divider'
-import { Box }                 from '@ui/layout'
-import { Column }              from '@ui/layout'
-import { Layout }              from '@ui/layout'
-import { Row }                 from '@ui/layout'
-import { Text }                from '@ui/text'
-import { updateSearchHistory } from '@app/store'
-import { useSearchHistory }    from '@app/store'
+import { Condition }                 from '@ui/condition'
+import { Divider }                   from '@ui/divider'
+import { Box }                       from '@ui/layout'
+import { Column }                    from '@ui/layout'
+import { Layout }                    from '@ui/layout'
+import { Row }                       from '@ui/layout'
+import { updateSearchHistoryAction } from '@app/store'
+import { useSearchValue }            from '@app/store'
+import { useSearchHistory }          from '@app/store'
 
-import { SearchHistory }       from './search-history'
+import { MotionBox }                 from '../styles'
+import { Results }                   from './results'
+import { SearchHistory }             from './search-history'
+import { WeRecommendReading }        from './we-recommend-reading'
 
 const SearchPopup: FC = () => {
+  const searchValue = useSearchValue()
   const searchHistory = useSearchHistory()
 
   useEffect(() => {
     const searchHistoryStorage = window.localStorage.getItem('searchHistory')
 
     if (searchHistoryStorage) {
-      updateSearchHistory(searchHistoryStorage.replace(/\[|\]/, '').split(','))
+      updateSearchHistoryAction(searchHistoryStorage.split(',').reverse())
     }
   }, [])
 
@@ -34,69 +37,32 @@ const SearchPopup: FC = () => {
     <Box width='100%' backgroundColor='white' boxShadow='grey' borderRadius='default'>
       <Layout flexBasis={24} flexShrink={0} />
       <Column fill>
-        <Layout flexBasis={24} />
         <Condition match={!!searchHistory.length}>
-          {searchHistory.map((title, index) => (
-            <Column key={title} width='100%' height='auto'>
-              <SearchHistory title={title} />
-              <Layout flexBasis={searchHistory.length - 1 === index ? 24 : 20} />
-            </Column>
-          ))}
-        </Condition>
-        <Row>
-          <Divider backgroundColor='lightBlack' />
-        </Row>
-        <Layout flexBasis={24} />
-        <Column height='auto'>
-          <Row>
-            <Text
-              textTransform='uppercase'
-              fontWeight='medium'
-              color='text.tertiary'
-              fontSize='atomic'
-            >
-              <FormattedMessage
-                id='header.we_recommend_reading'
-                defaultMessage='Советуем почитать'
-              />
-            </Text>
-          </Row>
           <Layout flexBasis={24} />
+          {searchHistory.slice(0, 5).map((title, index) => (
+            <MotionBox
+              key={title}
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+            >
+              <Column height='auto'>
+                <SearchHistory title={title} />
+                <Layout flexBasis={searchHistory.length - 1 === index ? 24 : 20} />
+              </Column>
+            </MotionBox>
+          ))}
           <Row>
-            <Box minWidth={72} height={60} backgroundColor='gray' borderRadius='intermediate' />
-            <Layout flexBasis={16} flexShrink={0} />
-            <Column height='auto'>
-              <Layout flexBasis={2} />
-              <Row>
-                <Text
-                  textTransform='uppercase'
-                  fontSize='micro'
-                  fontWeight='semiBold'
-                  color='text.accent'
-                >
-                  Текст
-                </Text>
-              </Row>
-              <Layout flexBasis={8} />
-              <Row>
-                <Text fontSize='default' lineHeight='extra'>
-                  Никита Михалков заканчивает сценарий нового фильма
-                </Text>
-              </Row>
-            </Column>
-          </Row>
-        </Column>
-        <Condition match={!searchHistory.length}>
-          <Row>
-            <Text color='text.tertiary' fontSize='default' lineHeight='small'>
-              <FormattedMessage
-                id='header.no_matches_found'
-                defaultMessage='Совпадений не найдено'
-              />
-            </Text>
+            <Divider backgroundColor='lightBlack' />
           </Row>
         </Condition>
         <Layout flexBasis={24} />
+        <Condition match={!searchValue.length}>
+          <WeRecommendReading />
+        </Condition>
+        <Condition match={!!searchValue.length}>
+          <Results />
+        </Condition>
       </Column>
       <Layout flexBasis={24} flexShrink={0} />
     </Box>

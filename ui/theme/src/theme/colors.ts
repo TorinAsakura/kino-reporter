@@ -1,6 +1,7 @@
 const colors = {
   primary: 'rgba(10, 10, 11, 1)',
   tertiary: 'rgba(172, 173, 183, 1)',
+  secondary: 'rgba(117, 118, 130, 1)',
   iceCube: 'rgba(255, 255, 255, 0.2)',
   inverseSecondary: 'rgba(255, 255, 255, 0.65)',
   accent: 'rgba(224, 29, 81, 1)',

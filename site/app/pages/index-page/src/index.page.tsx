@@ -10,6 +10,7 @@ const IndexPage = () => (
     <Header />
     <Layout flexBasis={[64, 64, 88]} />
     <PromoLine />
+    <Layout height='2000px' />
   </Column>
 )
 

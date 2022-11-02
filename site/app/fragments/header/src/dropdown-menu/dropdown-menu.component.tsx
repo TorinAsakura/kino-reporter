@@ -84,13 +84,17 @@ const DropdownMenu: FC = () => {
           <Row display={['flex', 'flex', 'none']}>
             <Row>
               <Button variant='secondary' size='small'>
-                <Text>О нас</Text>
+                <Text>
+                  <FormattedMessage id='header.about_us' defaultMessage='О нас' />
+                </Text>
               </Button>
             </Row>
             <Layout flexBasis={16} flexShrink={0} />
             <Row>
               <Button variant='secondary' size='small'>
-                <Text>Контакты</Text>
+                <Text>
+                  <FormattedMessage id='header.contacts' defaultMessage='Контакты' />
+                </Text>
               </Button>
             </Row>
           </Row>

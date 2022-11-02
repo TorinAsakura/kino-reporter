@@ -634,6 +634,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/react", "virtual:0911863c73c296046e1bad53000893e3585de88594ee2bfa6a541558816129cfef430c07dc856ef8fc97737c688643a854ee5919b8c71fb2a3f1f3846451ed86#npm:11.10.5"],\
             ["@emotion/styled", "virtual:0911863c73c296046e1bad53000893e3585de88594ee2bfa6a541558816129cfef430c07dc856ef8fc97737c688643a854ee5919b8c71fb2a3f1f3846451ed86#npm:11.10.5"],\
             ["@globals/data", "virtual:0911863c73c296046e1bad53000893e3585de88594ee2bfa6a541558816129cfef430c07dc856ef8fc97737c688643a854ee5919b8c71fb2a3f1f3846451ed86#workspace:globals/data"],\
+            ["@shared/utils", "workspace:shared/utils"],\
             ["@types/apollo__client", null],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
@@ -683,6 +684,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/react", "virtual:6960316b182d60ad067e6b4cca78d75d74575087300624a0b7098fb3ef2c8501c544b7704659013bf33a6eea6da696c0c7cebc797dc5403dc85f7fd5c336e28e#npm:11.10.5"],\
             ["@emotion/styled", "virtual:6960316b182d60ad067e6b4cca78d75d74575087300624a0b7098fb3ef2c8501c544b7704659013bf33a6eea6da696c0c7cebc797dc5403dc85f7fd5c336e28e#npm:11.10.5"],\
             ["@globals/data", "virtual:4b606cc874d715d7bd5ea9351306d81a85f3a1582c7099ab4b3eb468475429b0c73b1b2a98b7742a56655ea5c3cb0fb6a793562d4655d22607a9b2d6d5085506#workspace:globals/data"],\
+            ["@shared/utils", "workspace:shared/utils"],\
             ["@types/apollo__client", null],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
@@ -732,6 +734,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/react", "virtual:0911863c73c296046e1bad53000893e3585de88594ee2bfa6a541558816129cfef430c07dc856ef8fc97737c688643a854ee5919b8c71fb2a3f1f3846451ed86#npm:11.10.5"],\
             ["@emotion/styled", "virtual:0911863c73c296046e1bad53000893e3585de88594ee2bfa6a541558816129cfef430c07dc856ef8fc97737c688643a854ee5919b8c71fb2a3f1f3846451ed86#npm:11.10.5"],\
             ["@globals/data", "virtual:0911863c73c296046e1bad53000893e3585de88594ee2bfa6a541558816129cfef430c07dc856ef8fc97737c688643a854ee5919b8c71fb2a3f1f3846451ed86#workspace:globals/data"],\
+            ["@shared/utils", "workspace:shared/utils"],\
             ["@types/styled-system", "npm:5.1.15"],\
             ["@ui/avatar", "virtual:0911863c73c296046e1bad53000893e3585de88594ee2bfa6a541558816129cfef430c07dc856ef8fc97737c688643a854ee5919b8c71fb2a3f1f3846451ed86#workspace:ui/avatar"],\
             ["@ui/button", "virtual:0911863c73c296046e1bad53000893e3585de88594ee2bfa6a541558816129cfef430c07dc856ef8fc97737c688643a854ee5919b8c71fb2a3f1f3846451ed86#workspace:ui/button"],\
@@ -3622,7 +3625,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["workspace:shared/utils", {\
           "packageLocation": "./shared/utils/",\
           "packageDependencies": [\
-            ["@shared/utils", "workspace:shared/utils"]\
+            ["@shared/utils", "workspace:shared/utils"],\
+            ["@types/luxon", "npm:2.4.0"],\
+            ["luxon", "npm:2.5.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -4260,6 +4265,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.186-63caeea1e5-ee0c1368a8.zip/node_modules/@types/lodash/",\
           "packageDependencies": [\
             ["@types/lodash", "npm:4.14.186"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/luxon", [\
+        ["npm:2.4.0", {\
+          "packageLocation": "./.yarn/cache/@types-luxon-npm-2.4.0-081c630c88-eeb16a1bfe.zip/node_modules/@types/luxon/",\
+          "packageDependencies": [\
+            ["@types/luxon", "npm:2.4.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -10668,6 +10682,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/lru-cache-npm-7.14.0-354cf654ec-efdd329f2c.zip/node_modules/lru-cache/",\
           "packageDependencies": [\
             ["lru-cache", "npm:7.14.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["luxon", [\
+        ["npm:2.5.0", {\
+          "packageLocation": "./.yarn/cache/luxon-npm-2.5.0-3e7040fb3c-2fccce6bbd.zip/node_modules/luxon/",\
+          "packageDependencies": [\
+            ["luxon", "npm:2.5.0"]\
           ],\
           "linkType": "HARD"\
         }]\

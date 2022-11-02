@@ -6,5 +6,8 @@
   "header.journal_number_two": "Журнал №2",
   "header.materials_films_persons": "Материалы, фильмы, персоны...",
   "header.no_matches_found": "Совпадений не найдено",
-  "header.we_recommend_reading": "Советуем почитать"
+  "header.we_recommend_reading": "Советуем почитать",
+  "header.articles": "Статьи",
+  "header.persons": "Персоны",
+  "header.films": "Фильмы"
 }
