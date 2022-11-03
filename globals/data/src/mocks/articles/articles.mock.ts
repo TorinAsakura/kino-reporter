@@ -3,7 +3,7 @@ import { faker }         from '@faker-js/faker/locale/ru'
 import { Article }       from './article.interface'
 import { getRandomItem } from '../../helpers'
 
-const titles = ['Культура', 'Новости', 'Кино', 'Евгений']
+const titles = ['Культура', 'Новости', 'Кино', 'Жмышенко']
 
 const articlesMock: Article[] = [...Array(10)].map(() => ({
   id: faker.datatype.uuid(),

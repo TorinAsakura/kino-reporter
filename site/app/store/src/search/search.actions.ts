@@ -7,7 +7,7 @@ export const addSearchHistoryAction = (searchHistory: string[], history: string)
 export const updateSearchHistoryAction = (searchHistory: string[]) =>
   searchHistoryVar(searchHistory)
 
-export const removeItemSearchHistoryAction = (searchHistory: string[], history) =>
-  updateSearchHistoryAction(searchHistory.filter((item) => item !== history))
+export const removeItemSearchHistoryAction = (searchHistory: string[], index: number) =>
+  updateSearchHistoryAction(searchHistory.filter((item, i) => i !== index))
 
 export const updateSearchValueAction = (value: string) => searchValueVar(value)

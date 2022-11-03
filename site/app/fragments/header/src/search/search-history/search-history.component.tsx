@@ -6,30 +6,36 @@ import { CloseIcon }                     from '@ui/icons'
 import { RecentIcon }                    from '@ui/icons'
 import { Layout }                        from '@ui/layout'
 import { Row }                           from '@ui/layout'
+import { NextLink }                      from '@ui/link'
 import { Text }                          from '@ui/text'
 import { removeItemSearchHistoryAction } from '@app/store'
+import { updateSearchValueAction }       from '@app/store'
 import { useSearchHistory }              from '@app/store'
 
 import { SearchHistoryProps }            from './search-history.interface'
 
-const SearchHistory: FC<SearchHistoryProps> = ({ title }) => {
+const SearchHistory: FC<SearchHistoryProps> = ({ title, index }) => {
   const searchHistory = useSearchHistory()
 
   return (
     <Row alignItems='center'>
-      <Layout>
-        <RecentIcon width={20} height={20} />
-      </Layout>
-      <Layout flexBasis={8} />
-      <Layout maxWidth={250} overflow='hidden'>
-        <Text fontWeight='medium' fontSize='small' lineHeight='compact'>
-          {title}
-        </Text>
-      </Layout>
+      <NextLink path='/'>
+        <Row alignItems='center' onClick={() => updateSearchValueAction(title)}>
+          <Layout>
+            <RecentIcon width={20} height={20} />
+          </Layout>
+          <Layout flexBasis={8} />
+          <Layout width={240} overflow='hidden'>
+            <Text fontWeight='medium' fontSize='small' lineHeight='compact'>
+              {title}
+            </Text>
+          </Layout>
+        </Row>
+      </NextLink>
       <Layout flexGrow={1} />
       <Layout height={20}>
         <Button
-          onClick={() => removeItemSearchHistoryAction(searchHistory, title)}
+          onClick={() => removeItemSearchHistoryAction(searchHistory, index)}
           variant='closeSearch'
           size='ghost'
           p={0}

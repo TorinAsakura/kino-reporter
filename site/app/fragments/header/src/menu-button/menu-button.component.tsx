@@ -12,10 +12,20 @@ const Path = (props) => (
   <motion.path fill='transparent' strokeWidth='2' strokeLinecap='round' {...props} />
 )
 
-const MenuButton: FC<MenuButtonProps> = ({ transparent, activeDrawer, setActiveDrawer }) => (
+const MenuButton: FC<MenuButtonProps> = ({
+  transparent,
+  activeDrawer,
+  setActiveDrawer,
+  setOpenMobileSearch,
+}) => (
   <>
     <Condition match={!transparent}>
-      <GhostButton onClick={() => setActiveDrawer(!activeDrawer)}>
+      <GhostButton
+        onClick={() => {
+          setOpenMobileSearch(false)
+          setActiveDrawer(!activeDrawer)
+        }}
+      >
         <Box
           backgroundColor={activeDrawer ? 'lightRed' : 'lightGray'}
           borderRadius='intermediate'

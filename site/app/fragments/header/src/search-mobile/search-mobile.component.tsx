@@ -1,23 +1,28 @@
 import React                         from 'react'
 import { FC }                        from 'react'
 import { useEffect }                 from 'react'
+import { useIntl }                   from 'react-intl'
 
 import { Condition }                 from '@ui/condition'
-import { Divider }                   from '@ui/divider'
+import { Input }                     from '@ui/input'
 import { Box }                       from '@ui/layout'
 import { Column }                    from '@ui/layout'
 import { Layout }                    from '@ui/layout'
 import { Row }                       from '@ui/layout'
+import { addSearchHistoryAction }    from '@app/store'
 import { updateSearchHistoryAction } from '@app/store'
-import { useSearchValue }            from '@app/store'
+import { updateSearchValueAction }   from '@app/store'
 import { useSearchHistory }          from '@app/store'
+import { useSearchValue }            from '@app/store'
 
 import { Results }                   from '../search'
 import { SearchHistory }             from '../search'
 import { WeRecommendReading }        from '../search'
 import { MotionBox }                 from '../styles'
 
-const SearchPopup: FC = () => {
+const SearchMobile: FC = () => {
+  const intl = useIntl()
+
   const searchValue = useSearchValue()
   const searchHistory = useSearchHistory()
 
@@ -33,17 +38,37 @@ const SearchPopup: FC = () => {
     window.localStorage.setItem('searchHistory', searchHistory.toString())
   }, [searchHistory])
 
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      addSearchHistoryAction(searchHistory, searchValue)
+    }
+  }
+
   return (
     <Box
       width='100%'
-      maxHeight={650}
+      minHeight='100vh'
+      maxHeight='100vh'
       overflow='scroll'
-      backgroundColor='white'
-      boxShadow='grey'
-      borderRadius='default'
+      backgroundColor='background.white'
     >
-      <Layout flexBasis={24} flexShrink={0} />
-      <Column fill>
+      <Layout flexBasis={16} flexShrink={0} />
+      <Column fill height='100vh'>
+        <Layout flexBasis={8} />
+        <Row>
+          <Layout width='100%'>
+            <Input
+              type='search'
+              value={searchValue}
+              onChange={updateSearchValueAction}
+              onKeyPress={handleKeyPress}
+              placeholder={intl.formatMessage({
+                id: 'header.materials_films_persons',
+                defaultMessage: 'Материалы, фильмы, персоны...',
+              })}
+            />
+          </Layout>
+        </Row>
         <Condition match={!!searchHistory.length}>
           <Layout flexBasis={24} />
           {searchHistory.slice(0, 5).map((title, index) => (
@@ -55,13 +80,10 @@ const SearchPopup: FC = () => {
             >
               <Column height='auto'>
                 <SearchHistory title={title} index={index} />
-                <Layout flexBasis={searchHistory.length - 1 === index ? 24 : 20} />
+                <Layout flexBasis={searchHistory.slice(0, 5).length - 1 === index ? 0 : 20} />
               </Column>
             </MotionBox>
           ))}
-          <Row>
-            <Divider backgroundColor='lightBlack' />
-          </Row>
         </Condition>
         <Layout flexBasis={24} />
         <Condition match={!searchValue.length}>
@@ -71,9 +93,9 @@ const SearchPopup: FC = () => {
           <Results />
         </Condition>
       </Column>
-      <Layout flexBasis={24} flexShrink={0} />
+      <Layout flexBasis={16} flexShrink={0} />
     </Box>
   )
 }
 
-export { SearchPopup }
+export { SearchMobile }

@@ -19,7 +19,11 @@ const DropdownMenu: FC = () => {
   const { links } = useNavigationLinks()
 
   return (
-    <Box justifyContent='center' backgroundColor='white' borderRadius='bottomSide'>
+    <Box
+      justifyContent='center'
+      backgroundColor='white'
+      borderRadius={['none', 'none', 'bottomSide']}
+    >
       <Box
         justifyContent='center'
         maxWidth={1440}
@@ -34,7 +38,7 @@ const DropdownMenu: FC = () => {
               {links.data.drawer.map(({ title, path }, index) => (
                 <React.Fragment key={title}>
                   <NextLink path={path}>
-                    <Row>
+                    <Row alignItems='center'>
                       <Layout>
                         <Text
                           fontWeight='medium'
@@ -46,9 +50,12 @@ const DropdownMenu: FC = () => {
                         </Text>
                       </Layout>
                       <Layout flexBasis={6} />
-                      <Layout alignItems='center'>
-                        <ArrowRightIcon width={14} height={24} />
-                      </Layout>
+                      <Column>
+                        <Layout flexBasis={5} />
+                        <Layout alignItems='center'>
+                          <ArrowRightIcon width={18} height={20} />
+                        </Layout>
+                      </Column>
                     </Row>
                   </NextLink>
                   <Layout flexBasis={links.data.drawer.length - 1 !== index ? 32 : 0} />

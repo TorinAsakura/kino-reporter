@@ -7,7 +7,7 @@ const professions = ['Актер', 'Актер, режиссер', 'Продюс
 
 const personsMock: Person[] = [...Array(10)].map(() => ({
   id: faker.datatype.uuid(),
-  title: 'Евгений',
+  title: 'Жмышенко',
   profession: getRandomItem(professions) as string,
   image: {
     imageUrl: faker.image.people(1280, 1280, true),

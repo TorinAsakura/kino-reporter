@@ -7,6 +7,7 @@ import { Box }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Row }              from '@ui/layout'
+import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 
 import { PersonsProps }     from './persons.interface'
@@ -21,33 +22,37 @@ const Persons: FC<PersonsProps> = ({ filteredPersons }) => (
     <Layout flexBasis={24} />
     {filteredPersons.slice(0, 3).map(({ id, profession, title, image: { imageUrl, altText } }) => (
       <Column key={id}>
-        <Row>
-          <Box
-            minWidth={45}
-            maxWidth={45}
-            height={54}
-            backgroundColor='gray'
-            borderRadius='intermediate'
-            overflow='hidden'
-          >
-            <ImageBlock src={imageUrl} alt={altText} width={45} height={54} />
-          </Box>
-          <Layout flexBasis={16} flexShrink={0} />
-          <Column height='auto'>
-            <Layout flexBasis={2} />
+        <NextLink path='/'>
+          <Column>
             <Row>
-              <Text fontSize='semiRegular' color='text.primary'>
-                {title}
-              </Text>
-            </Row>
-            <Layout flexBasis={8} />
-            <Row overflow='hidden'>
-              <Text color='text.tertiary' fontSize='small' lineHeight='extra'>
-                {profession}
-              </Text>
+              <Box
+                minWidth={45}
+                maxWidth={45}
+                height={54}
+                backgroundColor='gray'
+                borderRadius='intermediate'
+                overflow='hidden'
+              >
+                <ImageBlock src={imageUrl} alt={altText} width={45} height={54} />
+              </Box>
+              <Layout flexBasis={16} flexShrink={0} />
+              <Column height='auto'>
+                <Layout flexBasis={5.5} />
+                <Row maxWidth={249}>
+                  <Text whiteSpace='normal' overflow='hidden' fontSize='semiRegular'>
+                    {title}
+                  </Text>
+                </Row>
+                <Layout flexBasis={8} />
+                <Row overflow='hidden'>
+                  <Text color='text.tertiary' fontSize='small' lineHeight='extra'>
+                    {profession}
+                  </Text>
+                </Row>
+              </Column>
             </Row>
           </Column>
-        </Row>
+        </NextLink>
         <Layout flexBasis={24} />
       </Column>
     ))}

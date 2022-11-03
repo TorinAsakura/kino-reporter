@@ -8,8 +8,11 @@ import { Person as IPerson }   from '@globals/data'
 import { Article as IArticle } from '@globals/data'
 import { Film as IFilm }       from '@globals/data'
 import { Condition }           from '@ui/condition'
+import { ArrowRightIcon }      from '@ui/icons'
 import { Layout }              from '@ui/layout'
+import { Column }              from '@ui/layout'
 import { Row }                 from '@ui/layout'
+import { NextLink }            from '@ui/link'
 import { Text }                from '@ui/text'
 import { useMockedArticles }   from '@globals/data'
 import { useMockedFilms }      from '@globals/data'
@@ -42,7 +45,25 @@ const Results: FC = () => {
   const filteredArticles = useFilteredData(articles)
 
   return (
-    <>
+    <Column>
+      <Condition
+        match={!!filteredFilms.length || !!filteredPersons.length || !!filteredArticles.length}
+      >
+        <NextLink path='/'>
+          <Row alignItems='center'>
+            <Layout>
+              <Text fontFamily='lora' fontSize='regular' lineHeight='extra'>
+                <FormattedMessage id='header.all_results' defaultMessage='Все результаты' />
+              </Text>
+            </Layout>
+            <Layout flexBasis={4} />
+            <Layout>
+              <ArrowRightIcon width={18} height={18} />
+            </Layout>
+          </Row>
+        </NextLink>
+        <Layout flexBasis={24} />
+      </Condition>
       <Condition match={!!filteredArticles.length}>
         <Articles filteredArticles={filteredArticles} />
       </Condition>
@@ -62,7 +83,8 @@ const Results: FC = () => {
         </Row>
         <Layout flexBasis={24} />
       </Condition>
-    </>
+      <Layout flexBasis={[64, 64, 0]} />
+    </Column>
   )
 }
 

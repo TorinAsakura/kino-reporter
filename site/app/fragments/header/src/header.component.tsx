@@ -7,7 +7,9 @@ import { useIntl }                 from 'react-intl'
 
 import { Avatar }                  from '@ui/avatar'
 import { GhostButton }             from '@ui/button'
+import { Condition }               from '@ui/condition'
 import { Drawer }                  from '@ui/drawer'
+import { CloseIcon }               from '@ui/icons'
 import { LogoIcon }                from '@ui/icons'
 import { SearchSecondaryIcon }     from '@ui/icons'
 import { Input }                   from '@ui/input'
@@ -26,6 +28,7 @@ import { DropdownMenu }            from './dropdown-menu'
 import { HeaderProps }             from './header.interface'
 import { MenuButton }              from './menu-button'
 import { NavigationList }          from './navigation-list'
+import { SearchMobile }            from './search-mobile'
 import { SearchPopup }             from './search-popup'
 import { MotionBox }               from './styles'
 
@@ -37,6 +40,7 @@ const Header: FC<HeaderProps> = ({ transparent = false }) => {
 
   const { triggerProps, layerProps, setOpen, render } = usePopover('bottom-center', 8, 'click')
 
+  const [openMobileSearch, setOpenMobileSearch] = useState<boolean>(false)
   const [activeDrawer, setActiveDrawer] = useState<boolean>(false)
   const [popupWidth, setPopupWidth] = useState<number>(0)
 
@@ -68,17 +72,22 @@ const Header: FC<HeaderProps> = ({ transparent = false }) => {
         <Layout flexBasis={[16, 16, 20]} flexShrink={0} />
         <Row justifyContent={['flex-start', 'flex-start', 'center']}>
           <Layout>
-            <MotionBox display='flex' initial={false} animate={activeDrawer ? 'open' : 'closed'}>
+            <MotionBox
+              display='flex'
+              initial={false}
+              animate={activeDrawer && !openMobileSearch ? 'open' : 'closed'}
+            >
               <MenuButton
                 transparent={transparent}
-                activeDrawer={activeDrawer}
+                activeDrawer={activeDrawer && !openMobileSearch}
                 setActiveDrawer={setActiveDrawer}
+                setOpenMobileSearch={setOpenMobileSearch}
               />
             </MotionBox>
             <Drawer
               top={88}
               mobileTop={64}
-              active={activeDrawer}
+              active={activeDrawer && !openMobileSearch}
               onClose={() => setActiveDrawer(false)}
             >
               <DropdownMenu />
@@ -134,10 +143,42 @@ const Header: FC<HeaderProps> = ({ transparent = false }) => {
             </MotionBox>
           )}
           <Layout flexBasis={[24, 24, 0]} flexShrink={0} flexGrow={[1, 1, 0]} />
-          <Row justifyContent='center' display={['flex', 'flex', 'none']} width={32} height={32}>
-            <GhostButton>
-              <SearchSecondaryIcon width={24} height={24} />
+          <Row
+            justifyContent='center'
+            alignItems='center'
+            display={['flex', 'flex', 'none']}
+            width={32}
+            height={32}
+          >
+            <GhostButton
+              onClick={() => {
+                setActiveDrawer(false)
+                setOpenMobileSearch(!openMobileSearch)
+              }}
+            >
+              <Condition
+                smooth
+                smoothOptions={{ duration: 0.35, pattern: 'in' }}
+                match={!openMobileSearch}
+              >
+                <SearchSecondaryIcon width={24} height={24} />
+              </Condition>
+              <Condition
+                smooth
+                smoothOptions={{ duration: 0.35, pattern: 'in' }}
+                match={openMobileSearch}
+              >
+                <CloseIcon width={24} height={24} />
+              </Condition>
             </GhostButton>
+            <Drawer
+              top='-100%'
+              mobileTop={64}
+              active={!activeDrawer && openMobileSearch}
+              onClose={() => setOpenMobileSearch(false)}
+            >
+              <SearchMobile />
+            </Drawer>
           </Row>
           <Layout flexBasis={[16, 16, 24]} flexShrink={0} />
           <Layout alignItems='center'>

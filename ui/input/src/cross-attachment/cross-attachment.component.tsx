@@ -24,7 +24,7 @@ const CrossAttachment: FC<CrossAttachmentProps> = forwardRef((
   return type === 'search' && value.length ? (
     <Attachment>
       <Condition match={value.length}>
-        <Box width={62}>
+        <Box width={67}>
           <GhostButton
             onClick={() => setValue('')}
             // @ts-ignore
