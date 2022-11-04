@@ -5,7 +5,7 @@ const useFilteredData = (data) => {
 
   const lowerSearchValue = searchValue.toLowerCase()
 
-  const filterBy = ({ title }) => {
+  const filterByTitle = ({ title }) => {
     const lowerTitle = title.toLowerCase()
 
     if (lowerTitle.startsWith(lowerSearchValue) || lowerTitle.toLowerCase() === lowerSearchValue)
@@ -16,7 +16,7 @@ const useFilteredData = (data) => {
     return true
   }
 
-  return data.filter(filterBy)
+  return data.filter(filterByTitle)
 }
 
 export { useFilteredData }

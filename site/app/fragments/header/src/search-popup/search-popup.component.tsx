@@ -44,7 +44,7 @@ const SearchPopup: FC = () => {
     >
       <Layout flexBasis={24} flexShrink={0} />
       <Column fill>
-        <Condition match={!!searchHistory.length}>
+        <Condition match={Boolean(searchHistory.length)}>
           <Layout flexBasis={24} />
           {searchHistory.slice(0, 5).map((title, index) => (
             <MotionBox
@@ -67,7 +67,7 @@ const SearchPopup: FC = () => {
         <Condition match={!searchValue.length}>
           <WeRecommendReading />
         </Condition>
-        <Condition match={!!searchValue.length}>
+        <Condition match={Boolean(searchValue.length)}>
           <Results />
         </Condition>
       </Column>

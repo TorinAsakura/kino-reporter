@@ -4,6 +4,7 @@ import React               from 'react'
 import { forwardRef }      from 'react'
 
 import { CheckboxIcon }    from '@ui/icons'
+import { doNothing }       from '@shared/utils'
 import { useHover }        from '@ui/utils'
 
 import { CheckboxProps }   from './checkbox.interface'
@@ -11,10 +12,6 @@ import { Container }       from './checkbox.styles'
 import { Box }             from './checkbox.styles'
 import { SelectCheckmark } from './checkbox.styles'
 import { Label }           from './checkbox.styles'
-
-const doNothing = (...args) => {
-  // do nothing
-}
 
 const CheckboxWithoutRef = (
   { children, active, onCheck = (newState) => doNothing(), ...props }: CheckboxProps,

@@ -1,15 +1,14 @@
-import React                 from 'react'
-import { FC }                from 'react'
-import { FormattedMessage }  from 'react-intl'
+import React                from 'react'
+import { FC }               from 'react'
+import { FormattedMessage } from 'react-intl'
 
-import { ImageBlock }        from '@ui/image'
-import { KinoReporterImage } from '@ui/image'
-import { Box }               from '@ui/layout'
-import { Column }            from '@ui/layout'
-import { Layout }            from '@ui/layout'
-import { Row }               from '@ui/layout'
-import { NextLink }          from '@ui/link'
-import { Text }              from '@ui/text'
+import { ImageBlock }       from '@ui/image'
+import { Box }              from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { Row }              from '@ui/layout'
+import { NextLink }         from '@ui/link'
+import { Text }             from '@ui/text'
 
 const Promo: FC = () => (
   <Box
@@ -45,7 +44,7 @@ const Promo: FC = () => (
           zIndex={-1}
           display={['none', 'none', 'flex']}
         >
-          <ImageBlock width={310} height={232} src={KinoReporterImage} />
+          <ImageBlock width={310} height={232} src='images/kino_reporter.png' />
         </Box>
         <Box
           width={232}
@@ -56,7 +55,7 @@ const Promo: FC = () => (
           zIndex={-1}
           display={['flex', 'flex', 'none']}
         >
-          <ImageBlock width={232} height={174} src={KinoReporterImage} />
+          <ImageBlock width={232} height={174} src='images/kino_reporter.png' />
         </Box>
         <Layout flexBasis={15} />
       </Layout>

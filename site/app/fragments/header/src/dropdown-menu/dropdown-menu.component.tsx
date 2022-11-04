@@ -35,7 +35,7 @@ const DropdownMenu: FC = () => {
           <Layout flexBasis={[24, 24, 32]} flexShrink={0} />
           <Column>
             <Column height='auto'>
-              {links.data.drawer.map(({ title, path }, index) => (
+              {links.links.drawer.map(({ title, path }, index) => (
                 <React.Fragment key={title}>
                   <NextLink variant='secondary' path={path}>
                     <Row alignItems='center'>
@@ -58,7 +58,7 @@ const DropdownMenu: FC = () => {
                       </Column>
                     </Row>
                   </NextLink>
-                  <Layout flexBasis={links.data.drawer.length - 1 !== index ? 32 : 0} />
+                  <Layout flexBasis={links.links.drawer.length - 1 !== index ? 32 : 0} />
                 </React.Fragment>
               ))}
             </Column>

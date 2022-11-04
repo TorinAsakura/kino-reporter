@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@app/store": "workspace:0.0.1",
-    "@globals/data": "workspace:0.0.1",
+    "@shared/data": "workspace:0.0.1",
     "@shared/utils": "workspace:0.0.1",
     "@ui/avatar": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",

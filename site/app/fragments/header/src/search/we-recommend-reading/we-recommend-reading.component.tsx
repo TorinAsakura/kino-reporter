@@ -4,7 +4,7 @@ import { FormattedMessage }  from 'react-intl'
 import { useEffect }         from 'react'
 import { useState }          from 'react'
 
-import { Article }           from '@globals/data'
+import { Article }           from '@shared/data'
 import { ImageBlock }        from '@ui/image'
 import { Box }               from '@ui/layout'
 import { Column }            from '@ui/layout'
@@ -13,7 +13,7 @@ import { Row }               from '@ui/layout'
 import { NextLink }          from '@ui/link'
 import { Text }              from '@ui/text'
 import { TextEllipsis }      from '@ui/text'
-import { useMockedArticles } from '@globals/data'
+import { useMockedArticles } from '@shared/data'
 
 const WeRecommendReading: FC = () => {
   const { articles: articlesData } = useMockedArticles()

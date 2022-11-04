@@ -1,7 +1,7 @@
 import { Link } from './navigation-links.interface'
 
 const navigationLinks: Link = {
-  data: {
+  links: {
     nav: [
       {
         title: 'Новости',

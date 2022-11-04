@@ -7,6 +7,7 @@
     "@atls-ui-parts/checkbox": "^0.0.6",
     "@atls-ui-parts/conditional-render": "^0.0.4",
     "@atls-ui-parts/hidden-input": "^0.0.6",
+    "@shared/utils": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/theme": "workspace:0.0.1",

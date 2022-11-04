@@ -180,7 +180,7 @@ __metadata:
     "@app/store": "workspace:0.0.1"
     "@emotion/react": ^11.10.0
     "@emotion/styled": ^11.10.0
-    "@globals/data": "workspace:0.0.1"
+    "@shared/data": "workspace:0.0.1"
     "@shared/utils": "workspace:0.0.1"
     "@types/styled-system": ^5
     "@ui/avatar": "workspace:0.0.1"
@@ -1336,17 +1336,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@globals/data@workspace:0.0.1, @globals/data@workspace:globals/data":
-  version: 0.0.0-use.local
-  resolution: "@globals/data@workspace:globals/data"
-  dependencies:
-    "@faker-js/faker": ^7.6.0
-    react: ^18.2.0
-  peerDependencies:
-    react: "*"
-  languageName: unknown
-  linkType: soft
-
 "@graphql-typed-document-node/core@npm:^3.1.1":
   version: 3.1.1
   resolution: "@graphql-typed-document-node/core@npm:3.1.1"
@@ -1889,6 +1878,17 @@ __metadata:
   checksum: 52dc02259d98da517fae4cb3a0a3850227bdae4939dda1980b788a7670636ca2b4a01b58df03dd5f65c1e3cb70c50fa8ce5762b582b3f499ec30ee5ce1fd9380
   languageName: node
   linkType: hard
+
+"@shared/data@workspace:0.0.1, @shared/data@workspace:shared/data":
+  version: 0.0.0-use.local
+  resolution: "@shared/data@workspace:shared/data"
+  dependencies:
+    "@faker-js/faker": ^7.6.0
+    react: ^18.2.0
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
 
 "@shared/utils@workspace:0.0.1, @shared/utils@workspace:shared/utils":
   version: 0.0.0-use.local
@@ -2658,6 +2658,7 @@ __metadata:
     "@atls-ui-parts/hidden-input": ^0.0.6
     "@emotion/react": ^11.10.0
     "@emotion/styled": ^11.10.0
+    "@shared/utils": "workspace:0.0.1"
     "@types/react": ^18.0.1
     "@types/styled-system": ^5
     "@ui/icons": "workspace:0.0.1"
@@ -2887,6 +2888,7 @@ __metadata:
   resolution: "@ui/utils@workspace:ui/utils"
   dependencies:
     "@types/react-dom": ^18.0.6
+    "@ui/condition": "workspace:0.0.1"
     react: ^18.2.0
     react-dom: ^18.2.0
     react-laag: ^2.0.4

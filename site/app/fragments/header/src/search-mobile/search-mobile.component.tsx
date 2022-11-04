@@ -69,7 +69,7 @@ const SearchMobile: FC = () => {
             />
           </Layout>
         </Row>
-        <Condition match={!!searchHistory.length}>
+        <Condition match={Boolean(searchHistory.length)}>
           <Layout flexBasis={24} />
           {searchHistory.slice(0, 5).map((title, index) => (
             <MotionBox
@@ -89,7 +89,7 @@ const SearchMobile: FC = () => {
         <Condition match={!searchValue.length}>
           <WeRecommendReading />
         </Condition>
-        <Condition match={!!searchValue.length}>
+        <Condition match={Boolean(searchValue.length)}>
           <Results />
         </Condition>
       </Column>

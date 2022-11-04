@@ -4,6 +4,7 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
+    "@ui/condition": "workspace:0.0.1",
     "react-laag": "^2.0.4"
   },
   "devDependencies": {

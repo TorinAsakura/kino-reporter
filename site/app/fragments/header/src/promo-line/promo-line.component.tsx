@@ -11,6 +11,7 @@ import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Text }             from '@ui/text'
+import { Repeater }         from '@ui/utils'
 
 const infinityLine = keyframes`
    0%   { transform: translateX(0) }
@@ -35,36 +36,39 @@ const PromoLine: FC = () => (
           alignItems='center'
           backgroundColor='white'
         >
-          {[...new Array(50)].map(() => (
-            <>
-              <Text
-                textTransform='uppercase'
-                whiteSpace='nowrap'
-                fontWeight='medium'
-                fontSize='small'
-              >
-                <FormattedMessage id='header.promo' defaultMessage='Весна-лето 2022' />
-              </Text>
-              <Layout flexBasis={10} flexShrink={0} />
-              <Layout>
-                <Box width={2} height={2} borderRadius='max' backgroundColor='primary' />
-              </Layout>
-              <Layout flexBasis={10} flexShrink={0} />
-              <Text
-                textTransform='uppercase'
-                whiteSpace='nowrap'
-                fontWeight='medium'
-                fontSize='small'
-              >
-                <FormattedMessage id='header.journal_number_two' defaultMessage='Журнал №2' />
-              </Text>
-              <Layout flexBasis={10} flexShrink={0} />
-              <Layout>
-                <Box width={2} height={2} borderRadius='max' backgroundColor='primary' />
-              </Layout>
-              <Layout flexBasis={10} flexShrink={0} />
-            </>
-          ))}
+          <Repeater
+            quantity={50}
+            onIteration={() => (
+              <>
+                <Text
+                  textTransform='uppercase'
+                  whiteSpace='nowrap'
+                  fontWeight='medium'
+                  fontSize='small'
+                >
+                  <FormattedMessage id='header.promo' defaultMessage='Весна-лето 2022' />
+                </Text>
+                <Layout flexBasis={10} flexShrink={0} />
+                <Layout>
+                  <Box width={2} height={2} borderRadius='max' backgroundColor='primary' />
+                </Layout>
+                <Layout flexBasis={10} flexShrink={0} />
+                <Text
+                  textTransform='uppercase'
+                  whiteSpace='nowrap'
+                  fontWeight='medium'
+                  fontSize='small'
+                >
+                  <FormattedMessage id='header.journal_number_two' defaultMessage='Журнал №2' />
+                </Text>
+                <Layout flexBasis={10} flexShrink={0} />
+                <Layout>
+                  <Box width={2} height={2} borderRadius='max' backgroundColor='primary' />
+                </Layout>
+                <Layout flexBasis={10} flexShrink={0} />
+              </>
+            )}
+          />
         </AnimationBox>
       </Row>
       <Row>

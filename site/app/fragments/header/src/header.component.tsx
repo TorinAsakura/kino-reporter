@@ -22,7 +22,7 @@ import { addSearchHistoryAction }  from '@app/store'
 import { updateSearchValueAction } from '@app/store'
 import { useSearchValue }          from '@app/store'
 import { useSearchHistory }        from '@app/store'
-import { useMockedUser }           from '@globals/data'
+import { useMockedUser }           from '@shared/data'
 import { usePopover }              from '@ui/utils'
 
 import { DropdownMenu }            from './dropdown-menu'

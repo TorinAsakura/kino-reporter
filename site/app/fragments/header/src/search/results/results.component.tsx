@@ -4,9 +4,9 @@ import { FormattedMessage }    from 'react-intl'
 import { useEffect }           from 'react'
 import { useState }            from 'react'
 
-import { Person as IPerson }   from '@globals/data'
-import { Article as IArticle } from '@globals/data'
-import { Film as IFilm }       from '@globals/data'
+import { Person as IPerson }   from '@shared/data'
+import { Article as IArticle } from '@shared/data'
+import { Film as IFilm }       from '@shared/data'
 import { Condition }           from '@ui/condition'
 import { ArrowRightIcon }      from '@ui/icons'
 import { Layout }              from '@ui/layout'
@@ -14,9 +14,9 @@ import { Column }              from '@ui/layout'
 import { Row }                 from '@ui/layout'
 import { NextLink }            from '@ui/link'
 import { Text }                from '@ui/text'
-import { useMockedArticles }   from '@globals/data'
-import { useMockedFilms }      from '@globals/data'
-import { useMockedPersons }    from '@globals/data'
+import { useMockedArticles }   from '@shared/data'
+import { useMockedFilms }      from '@shared/data'
+import { useMockedPersons }    from '@shared/data'
 
 import { Articles }            from './articles'
 import { Films }               from './films'
@@ -47,7 +47,11 @@ const Results: FC = () => {
   return (
     <Column>
       <Condition
-        match={!!filteredFilms.length || !!filteredPersons.length || !!filteredArticles.length}
+        match={
+          Boolean(filteredFilms.length) ||
+          Boolean(filteredPersons.length) ||
+          Boolean(filteredArticles.length)
+        }
       >
         <NextLink variant='secondary' path='/'>
           <Row alignItems='center'>
@@ -64,13 +68,13 @@ const Results: FC = () => {
         </NextLink>
         <Layout flexBasis={24} />
       </Condition>
-      <Condition match={!!filteredArticles.length}>
+      <Condition match={Boolean(filteredArticles.length)}>
         <Articles filteredArticles={filteredArticles} />
       </Condition>
-      <Condition match={!!filteredPersons.length}>
+      <Condition match={Boolean(filteredPersons.length)}>
         <Persons filteredPersons={filteredPersons} />
       </Condition>
-      <Condition match={!!filteredFilms.length}>
+      <Condition match={Boolean(filteredFilms.length)}>
         <Films filteredFilms={filteredFilms} />
       </Condition>
       <Condition
