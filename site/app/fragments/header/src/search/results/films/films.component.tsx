@@ -31,7 +31,7 @@ const Films: FC<FilmsProps> = ({ filteredFilms }) => (
       image: { imageUrl, altText },
     }) => (
       <Column key={id}>
-        <NextLink path='/'>
+        <NextLink variant='secondary' path='/'>
           <Column key={id}>
             <Row>
               <Box

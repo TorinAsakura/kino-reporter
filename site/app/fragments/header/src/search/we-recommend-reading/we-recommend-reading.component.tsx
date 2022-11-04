@@ -36,7 +36,7 @@ const WeRecommendReading: FC = () => {
       <Layout flexBasis={24} flexShrink={0} />
       {articles.slice(0, 3).map(({ id, title, description, image: { imageUrl, altText } }) => (
         <Column key={id}>
-          <NextLink path='/'>
+          <NextLink variant='secondary' path='/'>
             <Column>
               <Row>
                 <Box

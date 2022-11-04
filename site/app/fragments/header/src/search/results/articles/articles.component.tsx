@@ -28,7 +28,7 @@ const Articles: FC<ArticlesProps> = ({ filteredArticles }) => (
       image: { imageUrl, altText },
     }) => (
       <Column key={id}>
-        <NextLink path='/'>
+        <NextLink variant='secondary' path='/'>
           <Column>
             <Row>
               <Box

@@ -37,7 +37,7 @@ const DropdownMenu: FC = () => {
             <Column height='auto'>
               {links.data.drawer.map(({ title, path }, index) => (
                 <React.Fragment key={title}>
-                  <NextLink path={path}>
+                  <NextLink variant='secondary' path={path}>
                     <Row alignItems='center'>
                       <Layout>
                         <Text
@@ -72,7 +72,7 @@ const DropdownMenu: FC = () => {
             <Layout flexBasis={[16, 16, 24]} />
             <Row display={['none', 'none', 'flex']}>
               <Layout>
-                <NextLink path='/'>
+                <NextLink variant='secondary' path='/'>
                   <Text fontFamily='lora' fontSize='semiLarge' lineHeight='extra'>
                     <FormattedMessage id='header.about_us' defaultMessage='О нас' />
                   </Text>
@@ -80,7 +80,7 @@ const DropdownMenu: FC = () => {
               </Layout>
               <Layout flexBasis={48} />
               <Layout>
-                <NextLink path='/'>
+                <NextLink variant='secondary' path='/'>
                   <Text fontFamily='lora' fontSize='semiLarge' lineHeight='extra'>
                     <FormattedMessage id='header.contacts' defaultMessage='Контакты' />
                   </Text>

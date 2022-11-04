@@ -20,7 +20,7 @@ const Promo: FC = () => (
     backgroundColor='background.lightGray'
     borderRadius='default'
   >
-    <NextLink path='/'>
+    <NextLink variant='secondary' path='/'>
       <Layout width='100%' height='100%'>
         <Layout flexBasis={16} flexShrink={0} />
         <Column fill>

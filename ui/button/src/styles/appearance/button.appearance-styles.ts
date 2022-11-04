@@ -412,48 +412,28 @@ const appearanceCloseDisabledStyles = createAppearanceStyles({
   borderColor: prop('theme.colors.button.close.disabled.border'),
 })
 
-const appearanceCloseSearchDefaultStyles = ({ theme }) => ({
-  '&': createAppearanceStyles({
-    fontColor: theme.colors.button.closeSearch.default.font,
-    backgroundColor: theme.colors.button.closeSearch.default.background,
-    borderColor: theme.colors.button.closeSearch.default.border,
-  }),
-  'svg > path:only-of-type': {
-    fill: theme.colors.button.closeSearch.default.font,
-  },
+const appearanceCloseSearchDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.closeSearch.default.font'),
+  backgroundColor: prop('theme.colors.button.closeSearch.default.background'),
+  borderColor: prop('theme.colors.button.closeSearch.default.border'),
 })
 
-const appearanceCloseSearchHoverStyles = ({ theme }) => ({
-  '&:hover': createAppearanceStyles({
-    fontColor: theme.colors.button.closeSearch.hover.font,
-    backgroundColor: theme.colors.button.closeSearch.hover.background,
-    borderColor: theme.colors.button.closeSearch.hover.border,
-  }),
-  '&:hover svg > path:only-of-type': {
-    fill: theme.colors.button.closeSearch.hover.font,
-  },
+const appearanceCloseSearchHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.closeSearch.hover.font'),
+  backgroundColor: prop('theme.colors.button.closeSearch.hover.background'),
+  borderColor: prop('theme.colors.button.closeSearch.hover.border'),
 })
 
-const appearanceCloseSearchPressedStyles = ({ theme }) => ({
-  '&:active': createAppearanceStyles({
-    fontColor: theme.colors.button.closeSearch.pressed.font,
-    backgroundColor: theme.colors.button.closeSearch.pressed.background,
-    borderColor: theme.colors.button.closeSearch.pressed.border,
-  }),
-  '&:active svg > path:only-of-type': {
-    fill: theme.colors.button.closeSearch.pressed.font,
-  },
+const appearanceCloseSearchPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.closeSearch.pressed.font'),
+  backgroundColor: prop('theme.colors.button.closeSearch.pressed.background'),
+  borderColor: prop('theme.colors.button.closeSearch.pressed.border'),
 })
 
-const appearanceCloseSearchDisabledStyles = ({ theme }) => ({
-  '&': createAppearanceStyles({
-    fontColor: theme.colors.button.closeSearch.disabled.font,
-    backgroundColor: theme.colors.button.closeSearch.disabled.background,
-    borderColor: theme.colors.button.closeSearch.disabled.border,
-  }),
-  'svg > path:only-of-type': {
-    fill: theme.colors.button.closeSearch.disabled.font,
-  },
+const appearanceCloseSearchDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.closeSearch.disabled.font'),
+  backgroundColor: prop('theme.colors.button.closeSearch.disabled.background'),
+  borderColor: prop('theme.colors.button.closeSearch.disabled.border'),
 })
 
 const appearanceMapNavDefaultStyles = createAppearanceStyles({

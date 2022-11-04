@@ -6,4 +6,5 @@ export const replacements = {
   ArrowRightIcon: getColorReplacement({ color: '#0A0A0B' }),
   CameraIcon: getColorReplacement({ color: '#0A0A0B' }),
   SearchSecondaryIcon: getColorReplacement({ color: '#0A0A0B' }),
+  LogoIcon: getColorReplacement({ color: '#E01D51' }),
 }

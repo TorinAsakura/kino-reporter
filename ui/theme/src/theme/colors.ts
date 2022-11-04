@@ -37,6 +37,9 @@ const colors = {
     },
   },
   links: {
+    logo: {
+      color: 'rgba(224, 29, 81, 1)',
+    },
     primary: {
       default: {
         background: 'transparent',
@@ -175,7 +178,7 @@ const colors = {
       default: {
         background: 'rgba(10, 10, 11, 0.04)',
         border: 'transparent',
-        fontColor: 'rgba(10, 10, 11, 1)',
+        font: 'rgba(10, 10, 11, 1)',
       },
       hover: {
         background: 'rgba(10, 10, 11, 0.04)',

@@ -6,7 +6,7 @@ import { FC }                   from 'react'
 import { useMemo }              from 'react'
 import { forwardRef }           from 'react'
 
-import { GhostButton }          from '@ui/button'
+import { Button }               from '@ui/button'
 import { Condition }            from '@ui/condition'
 import { Box }                  from '@ui/layout'
 import { Text }                 from '@ui/text'
@@ -25,15 +25,17 @@ const CrossAttachment: FC<CrossAttachmentProps> = forwardRef((
     <Attachment>
       <Condition match={value.length}>
         <Box width={67}>
-          <GhostButton
+          <Button
+            size='ghost'
+            variant='reply'
             onClick={() => setValue('')}
             // @ts-ignore
             ref={ref as any}
           >
-            <Text color='text.secondary' fontSize='small' fontWeight='medium'>
+            <Text fontSize='small' fontWeight='medium'>
               Очистить
             </Text>
-          </GhostButton>
+          </Button>
         </Box>
       </Condition>
     </Attachment>

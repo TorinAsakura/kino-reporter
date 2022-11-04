@@ -18,14 +18,14 @@ export const appearanceNavLinkStyles: styleFn = ({ theme, keep }) =>
 
 export const activeNavLinkStyles: styleFn = ({ active, theme }) =>
   active && {
-    color: theme.colors.links.secondary.active.font,
+    color: theme.colors.links.secondary.pressed.font,
     '&:hover': {
-      color: theme.colors.links.secondary.active.font,
-      backgroundColor: theme.colors.links.secondary.active.background,
+      color: theme.colors.links.secondary.pressed.font,
+      backgroundColor: theme.colors.links.secondary.pressed.background,
       borderRadius: theme.radii.intermediate,
     },
     '& svg > path:only-of-type': {
-      fill: theme.colors.links.secondary.active.font,
+      fill: theme.colors.links.secondary.pressed.font,
     },
   }
 

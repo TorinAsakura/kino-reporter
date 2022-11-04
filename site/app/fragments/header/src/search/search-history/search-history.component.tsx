@@ -2,6 +2,7 @@ import React                             from 'react'
 import { FC }                            from 'react'
 
 import { Button }                        from '@ui/button'
+import { StatesConsumer }                from '@ui/button'
 import { CloseIcon }                     from '@ui/icons'
 import { RecentIcon }                    from '@ui/icons'
 import { Layout }                        from '@ui/layout'
@@ -11,6 +12,7 @@ import { Text }                          from '@ui/text'
 import { removeItemSearchHistoryAction } from '@app/store'
 import { updateSearchValueAction }       from '@app/store'
 import { useSearchHistory }              from '@app/store'
+import { getColor }                      from '@ui/button'
 
 import { SearchHistoryProps }            from './search-history.interface'
 
@@ -19,7 +21,7 @@ const SearchHistory: FC<SearchHistoryProps> = ({ title, index }) => {
 
   return (
     <Row alignItems='center'>
-      <NextLink path='/'>
+      <NextLink variant='secondary' path='/'>
         <Row alignItems='center' onClick={() => updateSearchValueAction(title)}>
           <Layout>
             <RecentIcon width={20} height={20} />
@@ -42,7 +44,11 @@ const SearchHistory: FC<SearchHistoryProps> = ({ title, index }) => {
           width={20}
           height={20}
         >
-          <CloseIcon width={20} height={20} />
+          <StatesConsumer>
+            {({ hover, pressed }) => (
+              <CloseIcon color={getColor('closeSearch', hover, pressed)} width={15} height={15} />
+            )}
+          </StatesConsumer>
         </Button>
       </Layout>
     </Row>

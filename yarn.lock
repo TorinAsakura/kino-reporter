@@ -211,6 +211,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@app/renderer-entrypoint@workspace:site/app/entrypoints/renderer":
+  version: 0.0.0-use.local
+  resolution: "@app/renderer-entrypoint@workspace:site/app/entrypoints/renderer"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@emotion/cache": ^11.10.1
+    "@emotion/core": ^11.0.0
+    "@emotion/css": ^11.10.0
+    "@emotion/react": ^11.10.0
+    "@emotion/styled": ^11.10.0
+    "@site/index-page": "workspace:0.0.1"
+    "@types/express": ^4
+    "@types/node": ^16.4.0
+    "@types/react": ^18.0.1
+    "@types/react-dom": ^18.0.6
+    "@ui/theme": "workspace:0.0.1"
+    express: ^4.18.1
+    graphql: ^16.6.0
+    next: 12.1.0
+    react: ^18.2.0
+    react-apollo: ^3.1.5
+    react-dom: ^18.2.0
+    react-intl: 5.24.3
+    typescript: ^4.4.4
+  languageName: unknown
+  linkType: soft
+
 "@app/store@workspace:0.0.1, @app/store@workspace:site/app/store":
   version: 0.0.0-use.local
   resolution: "@app/store@workspace:site/app/store"
@@ -1920,33 +1947,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/renderer-entrypoint@workspace:site/app/entrypoints/renderer":
-  version: 0.0.0-use.local
-  resolution: "@site/renderer-entrypoint@workspace:site/app/entrypoints/renderer"
-  dependencies:
-    "@apollo/client": ^3.6.9
-    "@emotion/cache": ^11.10.1
-    "@emotion/core": ^11.0.0
-    "@emotion/css": ^11.10.0
-    "@emotion/react": ^11.10.0
-    "@emotion/styled": ^11.10.0
-    "@site/index-page": "workspace:0.0.1"
-    "@types/express": ^4
-    "@types/node": ^16.4.0
-    "@types/react": ^18.0.1
-    "@types/react-dom": ^18.0.6
-    "@ui/theme": "workspace:0.0.1"
-    express: ^4.18.1
-    graphql: ^16.6.0
-    next: 12.1.0
-    react: ^18.2.0
-    react-apollo: ^3.1.5
-    react-dom: ^18.2.0
-    react-intl: 5.24.3
-    typescript: ^4.4.4
-  languageName: unknown
-  linkType: soft
-
 "@styled-system/background@npm:^5.1.2":
   version: 5.1.2
   resolution: "@styled-system/background@npm:5.1.2"
@@ -2833,6 +2833,7 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     styled-system: ^5.1.5
+    styled-tools: ^1.7.2
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"

@@ -17,6 +17,7 @@ import { Box }                     from '@ui/layout'
 import { Column }                  from '@ui/layout'
 import { Layout }                  from '@ui/layout'
 import { Row }                     from '@ui/layout'
+import { NextLink }                from '@ui/link'
 import { addSearchHistoryAction }  from '@app/store'
 import { updateSearchValueAction } from '@app/store'
 import { useSearchValue }          from '@app/store'
@@ -95,10 +96,16 @@ const Header: FC<HeaderProps> = ({ transparent = false }) => {
           </Layout>
           <Layout flexBasis={[16, 16, 24]} flexShrink={0} />
           <Layout display={['none', 'none', 'flex']}>
-            <LogoIcon width={102} height={40} />
+            <NextLink variant='logo' path='/'>
+              <Layout>
+                <LogoIcon width={102} height={40} />
+              </Layout>
+            </NextLink>
           </Layout>
           <Layout display={['flex', 'flex', 'none']}>
-            <LogoIcon width={82} height={32} />
+            <NextLink variant='logo' path='/'>
+              <LogoIcon width={82} height={32} />
+            </NextLink>
           </Layout>
           <Layout flexBasis={[0, 0, 64]} flexShrink={0} />
           <Layout display={['none', 'none', 'flex']} maxWidth={526} width='100%'>

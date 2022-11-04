@@ -22,7 +22,7 @@ const Persons: FC<PersonsProps> = ({ filteredPersons }) => (
     <Layout flexBasis={24} />
     {filteredPersons.slice(0, 3).map(({ id, profession, title, image: { imageUrl, altText } }) => (
       <Column key={id}>
-        <NextLink path='/'>
+        <NextLink variant='secondary' path='/'>
           <Column>
             <Row>
               <Box

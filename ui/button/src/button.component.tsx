@@ -8,6 +8,7 @@ import { useState }         from 'react'
 import { useHover }         from '@ui/utils'
 
 import { ButtonProps }      from './button.interface'
+import { StatesProvider }   from './providers'
 import { baseStyles }       from './button.styles'
 import { shapeStyles }      from './button.styles'
 import { appearanceStyles } from './styles'
@@ -28,7 +29,9 @@ export const Button: FC<ButtonProps> = ({ children, ...props }) => {
       {...props}
       {...hoverProps}
     >
-      <Content>{children}</Content>
+      <Content>
+        <StatesProvider value={{ hover, pressed }}>{children}</StatesProvider>
+      </Content>
     </ButtonElement>
   )
 }

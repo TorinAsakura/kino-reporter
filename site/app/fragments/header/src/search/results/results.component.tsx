@@ -49,7 +49,7 @@ const Results: FC = () => {
       <Condition
         match={!!filteredFilms.length || !!filteredPersons.length || !!filteredArticles.length}
       >
-        <NextLink path='/'>
+        <NextLink variant='secondary' path='/'>
           <Row alignItems='center'>
             <Layout>
               <Text fontFamily='lora' fontSize='regular' lineHeight='extra'>
