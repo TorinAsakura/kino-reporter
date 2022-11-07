@@ -12,10 +12,10 @@ const NavigationList: FC = () => {
 
   return (
     <Row alignItems='center'>
-      {links.links.nav.map(({ title, path }, index) => (
+      {links.nav.map(({ title, path }, index) => (
         <React.Fragment key={title}>
           <NextNavLink path={path}>{title}</NextNavLink>
-          <Layout flexBasis={links.links.nav.length - 1 === index ? 0 : 48} />
+          <Layout flexBasis={links.nav.length - 1 === index ? 0 : 48} />
         </React.Fragment>
       ))}
     </Row>

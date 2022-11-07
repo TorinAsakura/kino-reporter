@@ -36,9 +36,8 @@ const PromoLine: FC = () => (
           alignItems='center'
           backgroundColor='white'
         >
-          <Repeater
-            quantity={50}
-            onIteration={() => (
+          <Repeater quantity={50}>
+            {() => (
               <>
                 <Text
                   textTransform='uppercase'
@@ -68,7 +67,7 @@ const PromoLine: FC = () => (
                 <Layout flexBasis={10} flexShrink={0} />
               </>
             )}
-          />
+          </Repeater>
         </AnimationBox>
       </Row>
       <Row>

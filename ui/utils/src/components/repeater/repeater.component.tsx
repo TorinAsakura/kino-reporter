@@ -5,13 +5,17 @@ import { Condition }     from '@ui/condition'
 
 import { RepeaterProps } from './repeater.interfaces'
 
-const Repeater: FC<RepeaterProps> = ({ quantity, items, onIteration }) => (
-  <>
-    <Condition match={quantity === undefined}>{items?.map(onIteration)}</Condition>
-    <Condition match={quantity !== undefined}>
-      {[...new Array(quantity)]?.map(onIteration)}
-    </Condition>
-  </>
-)
+const Repeater: FC<RepeaterProps> = ({ quantity, items, children }) => {
+  if (typeof children !== 'function') throw new Error('Repeater: children must be a function')
+
+  return (
+    <>
+      <Condition match={quantity === undefined}>{items?.map(children)}</Condition>
+      <Condition match={quantity !== undefined}>
+        {[...new Array(quantity)]?.map(children)}
+      </Condition>
+    </>
+  )
+}
 
 export { Repeater }

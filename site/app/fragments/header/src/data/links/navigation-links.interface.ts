@@ -4,8 +4,6 @@ interface LinkProperties {
 }
 
 export interface Link {
-  links: {
-    nav: LinkProperties[]
-    drawer: LinkProperties[]
-  }
+  nav: LinkProperties[]
+  drawer: LinkProperties[]
 }
