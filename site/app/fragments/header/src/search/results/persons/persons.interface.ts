@@ -1,13 +1,7 @@
-export interface Person {
-  id: string
-  title: string
-  profession: string
-  image: {
-    imageUrl: string
-    altText: string
-  }
-}
+import { Person } from '@shared/data'
+
+export interface IPerson extends Person {}
 
 export interface PersonsProps {
-  filteredPersons: Person[]
+  filteredPersons: IPerson[]
 }

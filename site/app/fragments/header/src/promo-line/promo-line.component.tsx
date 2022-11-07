@@ -23,10 +23,10 @@ const AnimationBox = styled(Box)({
 })
 
 const PromoLine: FC = () => (
-  <Box position='fixed' top={[64, 64, 88]} overflow='hidden'>
+  <Box position='fixed' top={[64, 64, 88]} zIndex={20} overflow='hidden'>
     <Column>
       <Row>
-        <Divider backgroundColor='lightBlack' />
+        <Divider backgroundColor='gray' />
       </Row>
       <Row>
         <AnimationBox
@@ -71,7 +71,7 @@ const PromoLine: FC = () => (
         </AnimationBox>
       </Row>
       <Row>
-        <Divider backgroundColor='lightBlack' />
+        <Divider backgroundColor='gray' />
       </Row>
     </Column>
   </Box>
