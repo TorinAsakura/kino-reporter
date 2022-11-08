@@ -4,6 +4,7 @@ import { FormattedMessage }     from 'react-intl'
 import { useEffect }            from 'react'
 import { useState }             from 'react'
 
+import { MainArticle }          from '@shared/data'
 import { BoxGradient }          from '@ui/background'
 import { GhostButton }          from '@ui/button'
 import { LongArrowRightIcon }   from '@ui/icons'
@@ -21,7 +22,7 @@ import { useHover }             from '@ui/utils'
 const MainPreview: FC = () => {
   const { mainArticle: mainArticleData } = useMockedMainArticle()
 
-  const [mainArticle, setMainArticle] = useState()
+  const [mainArticle, setMainArticle] = useState<MainArticle>()
 
   useEffect(() => {
     setMainArticle(mainArticleData)
@@ -46,12 +47,17 @@ const MainPreview: FC = () => {
     >
       <BoxGradient
         opacity={hover ? 0.9 : 1}
-        width={843}
-        height={576}
+        width='100%'
+        height='100%'
         zIndex='-1'
         position='absolute'
       >
-        <ImageBlock src={mainArticle?.image.imageUrl} alt={mainArticle?.image.altText} />
+        <ImageBlock
+          // @ts-ignore
+          objectPosition='center'
+          src={mainArticle?.image.imageUrl}
+          alt={mainArticle?.image.altText}
+        />
       </BoxGradient>
       <Layout flexBasis={[16, 16, 32]} flexShrink={0} />
       <Column fill>
@@ -117,7 +123,7 @@ const MainPreview: FC = () => {
           <Layout flexGrow={1} />
           <Layout>
             <Text fontSize='small' lineHeight='compact' color='text.inverseSecondary'>
-              {formattedDate('fullDate', mainArticle?.date)}
+              {formattedDate('fullDate', mainArticle?.date as Date)}
             </Text>
           </Layout>
         </Row>

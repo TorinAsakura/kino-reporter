@@ -1,6 +1,6 @@
 import { FC }         from 'react'
 
-import { HoverProps } from './hover.interfaces'
+import { HoverProps } from './hover.interface'
 import { useHover }   from '../../hooks'
 
 const Hover: FC<HoverProps> = ({ children, ...props }) => {

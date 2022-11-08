@@ -16,6 +16,8 @@ const colors = {
       'linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), rgba(255, 255, 255, 0.2)',
     black: 'linear-gradient(180deg, rgba(0, 0, 0, 0.125) 24.31%, rgba(0, 0, 0, 0.5) 77.44%)',
     lightBlack: 'linear-gradient(180deg, rgba(0, 0, 0, 0.075) 24.31%, rgba(0, 0, 0, 0.3) 77.44%)',
+    purple:
+      'linear-gradient(180deg, #2D2D37 0%, rgba(45, 45, 55, 0) 25.58%, rgba(45, 45, 55, 0) 71.57%, #2D2D37 100%)',
   },
   background: {
     white: 'rgba(255, 255, 255, 1)',

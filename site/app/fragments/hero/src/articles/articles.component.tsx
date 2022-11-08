@@ -3,6 +3,7 @@ import { FC }                from 'react'
 import { useEffect }         from 'react'
 import { useState }          from 'react'
 
+import { Article }           from '@shared/data'
 import { BoxGradient }       from '@ui/background'
 import { Condition }         from '@ui/condition'
 import { Divider }           from '@ui/divider'
@@ -21,7 +22,7 @@ import { formattedDate }     from '@shared/utils'
 const Articles: FC = () => {
   const { articles: articlesData } = useMockedArticles()
 
-  const [articles, setArticles] = useState([])
+  const [articles, setArticles] = useState<Article[]>([])
 
   useEffect(() => {
     setArticles(articlesData)
@@ -119,9 +120,9 @@ const Articles: FC = () => {
             </Column>
           </NextLink>
           <Condition match={articles.slice(0, 4).length - 1 !== index}>
-            <Layout flexBasis={[20, 20, 24]} />
+            <Layout flexBasis={[20, 20, 23.5]} />
             <Divider backgroundColor='lightBlack' />
-            <Layout flexBasis={[20, 20, 24]} />
+            <Layout flexBasis={[20, 20, 23.5]} />
           </Condition>
         </Column>
       ))}
