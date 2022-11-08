@@ -1,6 +1,7 @@
 const fontSizes = {
   micro: 9,
   atomic: 11,
+  semiSmall: 12,
   small: 13,
   default: 14,
   semiRegular: 15,

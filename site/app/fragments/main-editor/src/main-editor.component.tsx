@@ -92,7 +92,7 @@ const MainEditor: FC = () => (
         </Layout>
         <Layout flexBasis={[0, 0, 132]} flexShrink={0} />
       </Box>
-      <Layout flexBasis={64} />
+      <Layout flexBasis={[32, 32, 48]} />
     </Column>
     <Layout flexBasis={[0, 0, 80]} />
   </Box>
