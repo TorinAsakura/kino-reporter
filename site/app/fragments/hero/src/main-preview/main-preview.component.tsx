@@ -97,6 +97,8 @@ const MainPreview: FC = () => {
             fontFamily='lora'
             fontSize={['xl', 'xl', 'big']}
             lineHeight='compact'
+            fontWeight='medium'
+            textShadow='semiBlack'
           >
             {mainArticle?.description}
           </TextEllipsis>

@@ -343,6 +343,41 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@app/selections-and-news-fragment@workspace:0.0.1, @app/selections-and-news-fragment@workspace:site/app/fragments/selections-and-news":
+  version: 0.0.0-use.local
+  resolution: "@app/selections-and-news-fragment@workspace:site/app/fragments/selections-and-news"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@emotion/react": ^11.10.0
+    "@emotion/styled": ^11.10.0
+    "@shared/data": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
+    "@types/styled-system": ^5
+    "@ui/background": "workspace:0.0.1"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/divider": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    next: 12.1.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-intl: 5.24.3
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@app/store@workspace:0.0.1, @app/store@workspace:site/app/store":
   version: 0.0.0-use.local
   resolution: "@app/store@workspace:site/app/store"
@@ -2044,6 +2079,7 @@ __metadata:
     "@app/hero-fragment": "workspace:0.0.1"
     "@app/main-editor-fragment": "workspace:0.0.1"
     "@app/reviews-fragment": "workspace:0.0.1"
+    "@app/selections-and-news-fragment": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     next: 12.1.0
     react: 18.2.0

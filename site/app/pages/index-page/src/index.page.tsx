@@ -1,12 +1,13 @@
-import React          from 'react'
+import React                 from 'react'
 
-import { Header }     from '@app/header-fragment'
-import { PromoLine }  from '@app/header-fragment'
-import { Hero }       from '@app/hero-fragment'
-import { MainEditor } from '@app/main-editor-fragment'
-import { Reviews }    from '@app/reviews-fragment'
-import { Column }     from '@ui/layout'
-import { Layout }     from '@ui/layout'
+import { Header }            from '@app/header-fragment'
+import { PromoLine }         from '@app/header-fragment'
+import { Hero }              from '@app/hero-fragment'
+import { MainEditor }        from '@app/main-editor-fragment'
+import { Reviews }           from '@app/reviews-fragment'
+import { SelectionsAndNews } from '@app/selections-and-news-fragment'
+import { Column }            from '@ui/layout'
+import { Layout }            from '@ui/layout'
 
 const IndexPage = () => (
   <Column fill>
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <Hero />
     <MainEditor />
     <Reviews />
+    <SelectionsAndNews />
   </Column>
 )
 
