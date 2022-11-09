@@ -3,6 +3,7 @@ import React                 from 'react'
 import { Header }            from '@app/header-fragment'
 import { PromoLine }         from '@app/header-fragment'
 import { Hero }              from '@app/hero-fragment'
+import { Interviews }        from '@app/interviews-fragment'
 import { MainEditor }        from '@app/main-editor-fragment'
 import { Reviews }           from '@app/reviews-fragment'
 import { SelectionsAndNews } from '@app/selections-and-news-fragment'
@@ -18,6 +19,7 @@ const IndexPage = () => (
     <MainEditor />
     <Reviews />
     <SelectionsAndNews />
+    <Interviews />
   </Column>
 )
 

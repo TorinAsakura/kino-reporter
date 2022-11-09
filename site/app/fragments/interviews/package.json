@@ -1,5 +1,5 @@
 {
-  "name": "@app/selections-and-news-fragment",
+  "name": "@app/interviews-fragment",
   "version": "0.0.1",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
@@ -8,7 +8,6 @@
     "@shared/utils": "workspace:0.0.1",
     "@ui/background": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
-    "@ui/carousel": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/divider": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
