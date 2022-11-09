@@ -1,1 +1,2 @@
-export * from './selection.component'
+export * from './selection-desktop.component'
+export * from './selection-mobile.component'

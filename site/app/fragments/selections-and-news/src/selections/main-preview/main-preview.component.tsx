@@ -1,17 +1,19 @@
-import React             from 'react'
-import { FC }            from 'react'
+import React                from 'react'
+import { FC }               from 'react'
 
-import { BoxGradient }   from '@ui/background'
-import { ImageBlock }    from '@ui/image'
-import { Column }        from '@ui/layout'
-import { Layout }        from '@ui/layout'
-import { Row }           from '@ui/layout'
-import { Text }          from '@ui/text'
-import { TextEllipsis }  from '@ui/text'
-import { formattedDate } from '@shared/utils'
-import { useHover }      from '@ui/utils'
+import { BoxGradient }      from '@ui/background'
+import { ImageBlock }       from '@ui/image'
+import { Column }           from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { Row }              from '@ui/layout'
+import { Text }             from '@ui/text'
+import { TextEllipsis }     from '@ui/text'
+import { formattedDate }    from '@shared/utils'
+import { useHover }         from '@ui/utils'
 
-const MainPreview: FC = ({ imageUrl, altText, title, description, date }) => {
+import { MainPreviewProps } from './main-preview.interface'
+
+const MainPreview: FC<MainPreviewProps> = ({ imageUrl, altText, title, description, date }) => {
   const [hover, hoverProps] = useHover()
 
   return (
@@ -69,8 +71,8 @@ const MainPreview: FC = ({ imageUrl, altText, title, description, date }) => {
             color='text.white'
             fontFamily='lora'
             fontWeight='medium'
-            fontSize={['xl', 'xl', 'big']}
-            lineHeight='compact'
+            fontSize={['semiLarge', 'semiLarge', 'big']}
+            lineHeight={['extra', 'extra', 'compact']}
             textShadow='semiBlack'
           >
             {description}
@@ -78,7 +80,11 @@ const MainPreview: FC = ({ imageUrl, altText, title, description, date }) => {
         </Row>
         <Layout flexBasis={[8, 8, 16]} />
         <Row>
-          <Text fontSize='small' lineHeight='compact' color='text.inverseSecondary'>
+          <Text
+            fontSize={['atomic', 'atomic', 'small']}
+            lineHeight='compact'
+            color='text.inverseSecondary'
+          >
             {formattedDate('fullDate', date as Date)}
           </Text>
         </Row>

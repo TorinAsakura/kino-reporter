@@ -16,7 +16,7 @@ const MainEditor: FC = () => (
   <Box width='100%' justifyContent='center'>
     <Layout flexBasis={[0, 0, 80]} />
     <Column fill maxWidth={1280}>
-      <Layout flexBasis={64} />
+      <Layout flexBasis={[24, 24, 64]} />
       <Box
         justifyContent='center'
         backgroundColor='background.dark'

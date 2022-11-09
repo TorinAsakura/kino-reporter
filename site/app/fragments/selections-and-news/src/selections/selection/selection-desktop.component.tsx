@@ -16,7 +16,7 @@ import { formattedDate }  from '@shared/utils'
 import { MainPreview }    from '../main-preview'
 import { SelectionProps } from './selection.interface'
 
-const Selection: FC<SelectionProps> = ({
+const SelectionDesktop: FC<SelectionProps> = ({
   index,
   title,
   date,
@@ -43,9 +43,9 @@ const Selection: FC<SelectionProps> = ({
           <Column fill>
             <Row>
               <Box
-                minWidth={[120, 120, 260]}
-                maxWidth={[120, 120, 260]}
-                height={[100, 100, 180]}
+                minWidth={260}
+                maxWidth={260}
+                height={180}
                 backgroundColor='gray'
                 borderRadius='intermediate'
                 overflow='hidden'
@@ -58,17 +58,7 @@ const Selection: FC<SelectionProps> = ({
                   height={180}
                   zIndex='-1'
                   position='absolute'
-                  display={['none', 'none', 'flex']}
-                >
-                  <ImageBlock src={imageUrl} alt={altText} />
-                </Box>
-                <Box
-                  minWidth={120}
-                  maxWidth={120}
-                  height={100}
-                  zIndex='-1'
-                  position='absolute'
-                  display={['flex', 'flex', 'none']}
+                  display='flex'
                 >
                   <ImageBlock src={imageUrl} alt={altText} />
                 </Box>
@@ -77,7 +67,7 @@ const Selection: FC<SelectionProps> = ({
                   <Layout flexBasis={12} />
                   <BoxGradient
                     alignItems='center'
-                    p={['6px 8px', '6px 8px', '8px 10px']}
+                    p='8px 10px'
                     blur={2}
                     gradient='white'
                     borderRadius='normal'
@@ -85,7 +75,7 @@ const Selection: FC<SelectionProps> = ({
                     <Text
                       color='text.white'
                       fontWeight='semiBold'
-                      fontSize={['micro', 'micro', 'atomic']}
+                      fontSize='atomic'
                       textTransform='uppercase'
                     >
                       {title}
@@ -94,36 +84,36 @@ const Selection: FC<SelectionProps> = ({
                 </Column>
               </Box>
             </Row>
-            <Layout flexBasis={16} />
-            <Row maxWidth={252} height={57} overflow='hidden'>
-              <TextEllipsis
-                lineClamp={3}
-                fontFamily='lora'
-                whiteSpace='normal'
-                fontSize={['default', 'default', 'semiRegular']}
-                lineHeight='extra'
-              >
-                {description}
-              </TextEllipsis>
-            </Row>
-            <Layout flexBasis={12} />
-            <Row>
-              <Text
-                fontSize={['atomic', 'atomic', 'small']}
-                lineHeight='compact'
-                color='text.secondary'
-              >
-                {formattedDate('fullDate', date)}
-              </Text>
-            </Row>
+            <Layout flexBasis={16} flexShrink={0} />
+            <Column fill>
+              <Row maxWidth={252} height={72} overflow='hidden'>
+                <Layout display='flex'>
+                  <TextEllipsis
+                    lineClamp={3}
+                    fontFamily='lora'
+                    whiteSpace='normal'
+                    fontSize='regular'
+                    lineHeight='small'
+                  >
+                    {description}
+                  </TextEllipsis>
+                </Layout>
+              </Row>
+              <Layout flexBasis={12} />
+              <Row>
+                <Text fontSize='small' lineHeight='compact' color='text.secondary'>
+                  {formattedDate('fullDate', date)}
+                </Text>
+              </Row>
+            </Column>
           </Column>
         </NextLink>
       </Condition>
     </Row>
     <Condition match={index !== 0}>
-      <Layout flexBasis={[0, 0, 32]} />
+      <Layout flexBasis={32} />
     </Condition>
   </>
 )
 
-export { Selection }
+export { SelectionDesktop }
