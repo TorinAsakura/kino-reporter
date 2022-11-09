@@ -37,7 +37,7 @@ const Interviews: FC = () => {
         <Row>
           <Hover>
             {(hover, hoverProps) => (
-              <NextLink variant='secondary' path='/reviews' {...hoverProps}>
+              <NextLink variant='secondary' path='/interviews' {...hoverProps}>
                 <Row alignItems='center'>
                   <Text
                     fontWeight='medium'

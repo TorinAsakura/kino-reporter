@@ -12,7 +12,7 @@ const navigationLinks: Link = {
     },
     {
       title: 'Интервью',
-      path: '/interview',
+      path: '/interviews',
     },
     {
       title: 'Рецензии',
