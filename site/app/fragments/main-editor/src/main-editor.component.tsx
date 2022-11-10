@@ -14,7 +14,7 @@ import { Gallery }          from './gallery'
 
 const MainEditor: FC = () => (
   <Box width='100%' justifyContent='center'>
-    <Layout flexBasis={[0, 0, 80]} />
+    <Layout flexBasis={[0, 0, 80]} flexShrink={0} />
     <Column fill maxWidth={1280}>
       <Layout flexBasis={[24, 24, 64]} />
       <Box
@@ -94,7 +94,7 @@ const MainEditor: FC = () => (
       </Box>
       <Layout flexBasis={[32, 32, 48]} />
     </Column>
-    <Layout flexBasis={[0, 0, 80]} />
+    <Layout flexBasis={[0, 0, 80]} flexShrink={0} />
   </Box>
 )
 

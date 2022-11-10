@@ -2,29 +2,47 @@ import React             from 'react'
 import { FC }            from 'react'
 import { useState }      from 'react'
 
-import { Box }           from '@ui/layout'
 import { Column }        from '@ui/layout'
 import { Layout }        from '@ui/layout'
 
 import { Cinema }        from './cinema'
 import { Tabs as ETabs } from './films-and-serials.interface'
+import { MotionBox }     from './styles'
 import { Tabs }          from './tabs'
+
+const variants = {
+  open: {
+    transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+  },
+  closed: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+  },
+}
 
 const FilmsAndSerials: FC = () => {
   const [selectedTab, setSelectedTab] = useState<string>(ETabs.FILMS)
+  const [isOpen, toggleOpen] = useState<boolean>(true)
 
   return (
-    <Box width='100%' justifyContent='center' backgroundColor='background.lightGray'>
-      <Layout flexBasis={80} />
+    <MotionBox
+      display='flex'
+      width='100%'
+      justifyContent='center'
+      backgroundColor='background.lightGray'
+      initial={false}
+      variants={variants}
+      animate={isOpen ? 'open' : 'closed'}
+    >
+      <Layout flexBasis={[0, 0, 80]} flexShrink={0} />
       <Column fill maxWidth={1280}>
-        <Layout flexBasis={64} />
-        <Tabs selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
-        <Layout flexBasis={32} />
+        <Layout flexBasis={[32, 32, 64]} />
+        <Tabs toggle={toggleOpen} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+        <Layout flexBasis={[20, 20, 32]} />
         <Cinema selectedTab={selectedTab} />
-        <Layout flexBasis={64} />
+        <Layout flexBasis={[32, 32, 64]} />
       </Column>
-      <Layout flexBasis={80} />
-    </Box>
+      <Layout flexBasis={[0, 0, 80]} />
+    </MotionBox>
   )
 }
 

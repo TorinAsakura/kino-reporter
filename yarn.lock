@@ -190,6 +190,7 @@ __metadata:
     "@ui/link": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
+    framer-motion: ^7.6.5
     next: 12.1.0
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -5488,6 +5489,27 @@ __metadata:
     "@emotion/is-prop-valid":
       optional: true
   checksum: 6086c8fd67c017dfbeefb03d43018cdccca2c7c9c12de593f7043a382175024984188ed101b7c9e29db11fb18b34b30cf73d459c2cf53ee3add1977429f7961f
+  languageName: node
+  linkType: hard
+
+"framer-motion@npm:^7.6.5":
+  version: 7.6.5
+  resolution: "framer-motion@npm:7.6.5"
+  dependencies:
+    "@emotion/is-prop-valid": ^0.8.2
+    "@motionone/dom": 10.13.1
+    framesync: 6.1.2
+    hey-listen: ^1.0.8
+    popmotion: 11.0.5
+    style-value-types: 5.1.2
+    tslib: 2.4.0
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  dependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+  checksum: d9a288e009c6b0a7ab8f8d8d6761da2335697468863d5eceaa2cf09ded8f016690b6c7b3fa683f9d14c9bd50dc57c0586fd5c2063d5851520f6982669ad93a65
   languageName: node
   linkType: hard
 

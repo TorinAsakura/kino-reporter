@@ -12,7 +12,7 @@ import { Tab }         from './tabs.interface'
 import { TabsProps }   from './tabs.interface'
 import { getColor }    from './get-color.helper'
 
-const Tabs: FC<TabsProps> = ({ selectedTab, setSelectedTab }) => {
+const Tabs: FC<TabsProps> = ({ toggle, selectedTab, setSelectedTab }) => {
   const [tabs] = useState<Tab[]>([
     {
       name: 'Кино',
@@ -26,16 +26,26 @@ const Tabs: FC<TabsProps> = ({ selectedTab, setSelectedTab }) => {
 
   return (
     <Row>
-      {tabs.map(({ name, id }, index) => (
+      <Layout flexBasis={[16, 16, 0]} />
+      {tabs.map(({ name, id }) => (
         <React.Fragment key={id}>
           <Layout>
-            <GhostButton onClick={() => setSelectedTab(id)}>
+            <GhostButton
+              onClick={() => {
+                toggle(false)
+                setTimeout(() => {
+                  toggle(true)
+                })
+                setSelectedTab(id)
+              }}
+            >
               <Hover>
                 {(hover, hoverProps) => (
                   <Text
                     color={getColor(hover, id, selectedTab)}
-                    fontSize='big'
+                    fontSize={['xl', 'xl', 'big']}
                     fontFamily='lora'
+                    fontWeight='medium'
                     {...hoverProps}
                   >
                     {name}
@@ -44,7 +54,7 @@ const Tabs: FC<TabsProps> = ({ selectedTab, setSelectedTab }) => {
               </Hover>
             </GhostButton>
           </Layout>
-          <Layout flexBasis={index === 0 ? 12 : 0} />
+          <Layout flexBasis={[8, 8, 12]} />
         </React.Fragment>
       ))}
     </Row>
