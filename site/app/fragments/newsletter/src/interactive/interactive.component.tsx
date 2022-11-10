@@ -53,7 +53,7 @@ const Interactive: FC = () => (
     >
       <ImageBlock width={160} height={160} src='images/sphere.png' />
     </Box>
-    <Layout display={['none', 'none', 'flex']}>
+    <Layout width='100%' display={['none', 'none', 'flex']}>
       <Repeater quantity={2}>
         {() => (
           <AnimationXBox
@@ -62,28 +62,18 @@ const Interactive: FC = () => (
             flexDirection='row'
             overflow='hidden'
             height={77}
-            minWidth={['220%', '220%', '240%']}
+            minWidth='240%'
             justifyContent='space-around'
             alignItems='center'
           >
             <Box justifyContent='space-around' flexDirection='row'>
-              <Box minWidth={[524, 524, 675]} height={[56, 56, 77]} zIndex={1}>
-                <Layout display={['none', 'none', 'flex']}>
-                  <ImageBlock src='images/be_aware.svg' />
-                </Layout>
-                <Layout display={['flex', 'flex', 'none']}>
-                  <ImageBlock src='images/be_aware_mobile.svg' />
-                </Layout>
+              <Box minWidth={675} height={77} zIndex={1}>
+                <ImageBlock src='images/be_aware.svg' />
               </Box>
             </Box>
             <Box justifyContent='space-around' flexDirection='row'>
-              <Box minWidth={[524, 524, 675]} height={[56, 56, 77]} zIndex={1}>
-                <Layout display={['none', 'none', 'flex']}>
-                  <ImageBlock src='images/be_aware.svg' />
-                </Layout>
-                <Layout display={['flex', 'flex', 'none']}>
-                  <ImageBlock src='images/be_aware_mobile.svg' />
-                </Layout>
+              <Box minWidth={675} height={77} zIndex={1}>
+                <ImageBlock src='images/be_aware.svg' />
               </Box>
             </Box>
           </AnimationXBox>
