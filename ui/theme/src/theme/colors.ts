@@ -18,6 +18,8 @@ const colors = {
     lightBlack: 'linear-gradient(180deg, rgba(0, 0, 0, 0.075) 24.31%, rgba(0, 0, 0, 0.3) 77.44%)',
     purple:
       'linear-gradient(180deg, #2D2D37 0%, rgba(45, 45, 55, 0) 25.58%, rgba(45, 45, 55, 0) 71.57%, #2D2D37 100%)',
+    purpleRow:
+      'linear-gradient(90deg, #2D2D37 0%, rgba(45, 45, 55, 0) 22.92%, rgba(45, 45, 55, 0) 81.25%, #2D2D37 100%)',
   },
   background: {
     white: 'rgba(255, 255, 255, 1)',
@@ -35,6 +37,7 @@ const colors = {
     accent: 'rgba(224, 29, 81, 1)',
     okko: 'rgba(78, 29, 137, 1)',
     ivi: 'rgba(255, 21, 80, 1)',
+    danger: 'rgba(252, 66, 66, 1)',
   },
   checkbox: {
     primary: {
@@ -212,6 +215,39 @@ const colors = {
       },
       error: 'rgba(213, 52, 52, 1)',
     },
+    secondary: {
+      default: {
+        background: 'rgba(255, 255, 255, 0.15)',
+        border: 'transparent',
+        font: 'rgba(255, 255, 255, 1)',
+      },
+      hover: {
+        background: 'rgba(255, 255, 255, 0.15)',
+        border: 'rgba(255, 255, 255, 0.25)',
+        font: 'rgba(255, 255, 255, 1)',
+      },
+      pressed: {
+        background: 'rgba(255, 255, 255, 0.15)',
+        border: 'transparent',
+        font: 'rgba(10, 10, 11, 1)',
+      },
+      focus: {
+        background: 'rgba(255, 255, 255, 0.15)',
+        border: 'rgba(255, 255, 255, 0.25)',
+        font: 'rgba(255, 255, 255, 1)',
+      },
+      disabled: {
+        background: 'rgba(255, 255, 255, 0.15)',
+        border: 'transparent',
+        font: 'rgba(255, 255, 255, 0.4)',
+        label: 'rgba(128, 128, 128, 1)',
+      },
+      error: {
+        background: 'rgba(255, 255, 255, 0.15)',
+        border: 'rgba(252, 66, 66, 1)',
+        font: 'rgba(252, 66, 66, 1)',
+      },
+    },
   },
   button: {
     primary: {
@@ -256,6 +292,28 @@ const colors = {
         background: 'rgba(172, 173, 183, 1)',
         font: 'rgba(255, 255, 255, 0.4)',
         border: 'rgba(172, 173, 183, 1)',
+      },
+    },
+    buy: {
+      default: {
+        background: 'rgba(224, 29, 81, 1)',
+        font: 'rgba(255, 255, 255, 1)',
+        border: 'rgba(224, 29, 81, 1)',
+      },
+      hover: {
+        background: 'rgba(200, 21, 70, 1)',
+        font: 'rgba(255, 255, 255, 1)',
+        border: 'rgba(200, 21, 70, 1)',
+      },
+      pressed: {
+        background: 'rgba(177, 16, 52, 1)',
+        font: 'rgba(255, 255, 255, 1)',
+        border: 'rgba(177, 16, 52, 1)',
+      },
+      disabled: {
+        background: 'rgba(172, 173, 183, 1)',
+        font: 'rgba(255, 255, 255, 0.4)',
+        border: 'rgba(10, 10, 11, 0.04)',
       },
     },
     secondary: {

@@ -12,6 +12,7 @@
     "@app/hero-fragment": "workspace:0.0.1",
     "@app/interviews-fragment": "workspace:0.0.1",
     "@app/main-editor-fragment": "workspace:0.0.1",
+    "@app/newsletter-fragment": "workspace:0.0.1",
     "@app/reviews-fragment": "workspace:0.0.1",
     "@app/selections-and-news-fragment": "workspace:0.0.1",
     "next": "12.1.0",

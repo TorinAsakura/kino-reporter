@@ -39,7 +39,6 @@ const FilmsAndSerials: FC = () => {
         <Tabs toggle={toggleOpen} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
         <Layout flexBasis={[20, 20, 32]} />
         <Cinema selectedTab={selectedTab} />
-        <Layout flexBasis={[32, 32, 64]} />
       </Column>
       <Layout flexBasis={[0, 0, 80]} />
     </MotionBox>

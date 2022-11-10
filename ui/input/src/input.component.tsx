@@ -20,6 +20,7 @@ import { useHover }                 from '@ui/utils'
 
 import { CrossAttachment }          from './cross-attachment'
 import { InputProps }               from './input.interfaces'
+import { NewsletterAttachment }     from './newsletter-attachment'
 import { SearchAttachment }         from './search-attachment'
 import { placeholderStyles }        from './placeholder-attachment'
 import { baseStyles }               from './styles'
@@ -53,6 +54,10 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
     type,
     hint,
     maxLength,
+    errorText = '',
+    errorMessage,
+    isMessageSent,
+    setIsMessageSent,
     textarea,
     ...props
   },
@@ -107,6 +112,7 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
           {...props}
           {...(textarea && containerProps)}
           textarea={textarea}
+          error={errorText !== ''}
           size={size}
           focus={focus}
           disabled={disabled}
@@ -142,11 +148,19 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
             setValue={onChange || doNothing}
             ref={crossRef}
           />
+          <NewsletterAttachment
+            error={errorText}
+            type={type}
+            value={value}
+            isMessageSent={isMessageSent}
+            setIsMessageSent={setIsMessageSent}
+            setValue={onChange || doNothing}
+          />
         </InputElement>
-        <Condition match={!!hint}>
+        <Condition match={errorText !== ''}>
           <Layout flexShrink={0} flexBasis={8} />
-          <Text fontSize='semiRegular' color='text.lightGray'>
-            {hint}
+          <Text fontSize='semiSmall' color='text.danger'>
+            {errorText}
           </Text>
         </Condition>
       </Column>

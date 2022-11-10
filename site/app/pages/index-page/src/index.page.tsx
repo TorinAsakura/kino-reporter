@@ -6,6 +6,7 @@ import { PromoLine }         from '@app/header-fragment'
 import { Hero }              from '@app/hero-fragment'
 import { Interviews }        from '@app/interviews-fragment'
 import { MainEditor }        from '@app/main-editor-fragment'
+import { Newsletter }        from '@app/newsletter-fragment'
 import { Reviews }           from '@app/reviews-fragment'
 import { SelectionsAndNews } from '@app/selections-and-news-fragment'
 import { Column }            from '@ui/layout'
@@ -22,6 +23,7 @@ const IndexPage = () => (
     <SelectionsAndNews />
     <Interviews />
     <FilmsAndSerials />
+    <Newsletter />
   </Column>
 )
 

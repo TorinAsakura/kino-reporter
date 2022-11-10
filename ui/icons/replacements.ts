@@ -8,4 +8,6 @@ export const replacements = {
   SearchSecondaryIcon: getColorReplacement({ color: '#0A0A0B' }),
   LogoIcon: getColorReplacement({ color: '#E01D51' }),
   LongArrowRightIcon: getColorReplacement({ color: '#0A0A0B' }),
+  NewsletterIcon: getColorReplacement({ color: '#0A0A0B' }),
+  SuccessIcon: getColorReplacement({ color: '#0A0A0B' }),
 }

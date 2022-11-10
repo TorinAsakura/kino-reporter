@@ -21,5 +21,8 @@
   "selections_and_news.news": "Новости",
   "interviews.interviews": "Интервью",
   "films_and_serials.films": "Кино",
-  "films_and_serials.serials": "Сериалы"
+  "films_and_serials.serials": "Сериалы",
+  "newsletter.description": "Подпишитесь и начните получать дайджест новостей, событий и материалов еженедельно",
+  "newsletter.mailing_list": "Рассылку можно отключить в любой момент",
+  "newsletter.enter_email": "Введите ваш email"
 }

@@ -52,6 +52,30 @@ const appearanceInversePrimaryDisabledStyles = createAppearanceStyles({
   borderColor: prop('theme.colors.button.inversePrimary.disabled.border'),
 })
 
+const appearanceBuyDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.buy.default.font'),
+  backgroundColor: prop('theme.colors.button.buy.default.background'),
+  borderColor: prop('theme.colors.button.buy.default.border'),
+})
+
+const appearanceBuyHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.buy.hover.font'),
+  backgroundColor: prop('theme.colors.button.buy.hover.background'),
+  borderColor: prop('theme.colors.button.buy.hover.border'),
+})
+
+const appearanceBuyPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.buy.pressed.font'),
+  backgroundColor: prop('theme.colors.button.buy.pressed.background'),
+  borderColor: prop('theme.colors.button.buy.pressed.border'),
+})
+
+const appearanceBuyDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.buy.disabled.font'),
+  backgroundColor: prop('theme.colors.button.buy.disabled.background'),
+  borderColor: prop('theme.colors.button.buy.disabled.border'),
+})
+
 const appearanceSecondaryDefaultStyles = createAppearanceStyles({
   fontColor: prop('theme.colors.button.secondary.default.font'),
   backgroundColor: prop('theme.colors.button.secondary.default.background'),
@@ -577,6 +601,15 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
         appearanceInversePrimaryHoverStyles,
         appearanceInversePrimaryDefaultStyles
       )
+    )
+  ),
+  buy: ifProp(
+    prop('disabled', false),
+    appearanceBuyDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceBuyPressedStyles,
+      ifProp(prop('hover', false), appearanceBuyHoverStyles, appearanceBuyDefaultStyles)
     )
   ),
   secondary: ifProp(
