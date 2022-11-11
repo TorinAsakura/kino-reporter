@@ -4,13 +4,13 @@ import { FormattedMessage } from 'react-intl'
 import { useState }         from 'react'
 import { useIntl }          from 'react-intl'
 
+import { Condition }        from '@ui/condition'
 import { Input }            from '@ui/input'
 import { Box }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Space }            from '@ui/text'
-import { Comma }            from '@ui/text'
 import { Text }             from '@ui/text'
 
 import { Interactive }      from './interactive'
@@ -21,13 +21,13 @@ const Newsletter: FC = () => {
   const [value, setValue] = useState<string>('')
   const [submitValid, setSubmitValid] = useState<boolean>(false)
 
-  const description = intl.formatMessage({ id: 'newsletter.description' })
-  const firstPart = description.slice(0, 39)
-  const news = description.slice(40, 48)
-  const events = description.slice(50, 57)
-  const and = description.slice(58, 59)
-  const materials = description.slice(60, 70)
-  const weekly = description.slice(71)
+  const description: string[] = intl.formatMessage({ id: 'newsletter.description' }).split(' ')
+
+  const materials = intl.formatMessage({ id: 'newsletter.materials' })
+  const news = intl.formatMessage({ id: 'newsletter.news' })
+  const events = intl.formatMessage({ id: 'newsletter.events' })
+
+  const words = [materials, news, events]
 
   return (
     <Box width='100%' justifyContent='center' backgroundColor='background.lightGray'>
@@ -46,57 +46,24 @@ const Newsletter: FC = () => {
             <Layout flexBasis={[24, 24, 48]} />
             <Row width='100%' justifyContent='center' maxWidth={['100%', '100%', 496]}>
               <Layout flexBasis={[24, 24, 0]} flexShrink={0} />
-              <Layout>
-                <Text display='inline' fontSize={['semiLarge', 'semiLarge', 'large']}>
-                  <Text
-                    fontWeight='medium'
-                    lineHeight='extra'
-                    fontFamily='lora'
-                    display='inline'
-                    color='text.white'
-                  >
-                    {firstPart}
-                  </Text>
-                  <Space />
-                  <Text
-                    fontWeight='medium'
-                    lineHeight='extra'
-                    fontFamily='lora'
-                    color='text.accent'
-                  >
-                    {news}
-                  </Text>
-                  <Text fontWeight='medium' lineHeight='extra' fontFamily='lora' color='text.white'>
-                    <Comma />
-                  </Text>
-                  <Space />
-                  <Text
-                    fontWeight='medium'
-                    lineHeight='extra'
-                    fontFamily='lora'
-                    color='text.accent'
-                  >
-                    {events}
-                  </Text>
-                  <Space />
-                  <Text fontWeight='medium' lineHeight='extra' fontFamily='lora' color='text.white'>
-                    {and}
-                  </Text>
-                  <Space />
-                  <Text
-                    fontWeight='medium'
-                    lineHeight='extra'
-                    fontFamily='lora'
-                    color='text.accent'
-                  >
-                    {materials}
-                  </Text>
-                  <Space />
-                  <Text fontWeight='medium' lineHeight='extra' fontFamily='lora' color='text.white'>
-                    {weekly}
-                  </Text>
-                </Text>
-              </Layout>
+              <Row flexWrap='wrap'>
+                {description.map((word: string) => (
+                  <React.Fragment key={word}>
+                    <Text
+                      fontWeight='medium'
+                      lineHeight='extra'
+                      fontFamily='lora'
+                      color={words.includes(word) ? 'text.accent' : 'text.white'}
+                      fontSize={['semiLarge', 'semiLarge', 'large']}
+                    >
+                      {word}
+                    </Text>
+                    <Condition match={word !== news}>
+                      <Space />
+                    </Condition>
+                  </React.Fragment>
+                ))}
+              </Row>
               <Layout flexBasis={[24, 24, 0]} flexShrink={0} />
             </Row>
             <Layout flexBasis={[20, 20, 32]} />
