@@ -28,6 +28,7 @@ type ButtonColors =
   | 'socialNav'
   | 'social'
   | 'buy'
+  | 'fullRounded'
 
 export interface ButtonProps extends BaseButtonProps, LayoutProps, SpaceProps {
   variant?: ButtonColors

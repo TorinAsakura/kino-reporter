@@ -206,6 +206,39 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@app/footer-fragment@workspace:0.0.1, @app/footer-fragment@workspace:site/app/fragments/footer":
+  version: 0.0.0-use.local
+  resolution: "@app/footer-fragment@workspace:site/app/fragments/footer"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@emotion/react": ^11.10.0
+    "@emotion/styled": ^11.10.0
+    "@shared/data": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
+    "@types/styled-system": ^5
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/divider": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    next: 12.1.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-intl: 5.24.3
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@app/header-fragment@workspace:0.0.1, @app/header-fragment@workspace:site/app/fragments/header":
   version: 0.0.0-use.local
   resolution: "@app/header-fragment@workspace:site/app/fragments/header"
@@ -2234,6 +2267,7 @@ __metadata:
   resolution: "@site/index-page@workspace:site/app/pages/index-page"
   dependencies:
     "@app/films-and-serials-fragment": "workspace:0.0.1"
+    "@app/footer-fragment": "workspace:0.0.1"
     "@app/header-fragment": "workspace:0.0.1"
     "@app/hero-fragment": "workspace:0.0.1"
     "@app/interviews-fragment": "workspace:0.0.1"
