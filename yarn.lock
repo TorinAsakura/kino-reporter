@@ -343,6 +343,42 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@app/selections-and-news-fragment@workspace:0.0.1, @app/selections-and-news-fragment@workspace:site/app/fragments/selections-and-news":
+  version: 0.0.0-use.local
+  resolution: "@app/selections-and-news-fragment@workspace:site/app/fragments/selections-and-news"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@emotion/react": ^11.10.0
+    "@emotion/styled": ^11.10.0
+    "@shared/data": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
+    "@types/styled-system": ^5
+    "@ui/background": "workspace:0.0.1"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/carousel": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/divider": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    next: 12.1.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-intl: 5.24.3
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@app/store@workspace:0.0.1, @app/store@workspace:site/app/store":
   version: 0.0.0-use.local
   resolution: "@app/store@workspace:site/app/store"
@@ -468,6 +504,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/dom@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@atls-ui-parts/dom@npm:0.0.1"
+  peerDependencies:
+    react: ^17.0.1
+  checksum: 810fb3fbb96118903a2d958d08537484f190d1f57f8123983f2e3f19c22b52021f223cdf1007ab920c509d374cd4f8195e15e7adc614eb85faeb789f934d5e8d
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/events-state@npm:0.0.4":
   version: 0.0.4
   resolution: "@atls-ui-parts/events-state@npm:0.0.4"
@@ -546,6 +591,19 @@ __metadata:
   peerDependencies:
     styled-system: ^5.1.5
   checksum: f47f1162cb08e138257aa7b26d47fd8b48a4cd3d4c5bc4fdc4797a3dee356fe79e77ddddbf7ac55225c6245e47a20e1c34815d1dc22205dcd6d1f9231c7cbd7e
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/swiper@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@atls-ui-parts/swiper@npm:0.0.3"
+  dependencies:
+    nanoid: ^4.0.0
+  peerDependencies:
+    "@emotion/css": "*"
+    react: ^17.0.1
+    swiper: ^8.3.1
+  checksum: fd2de967ab4bcae5ab677e4ce7faf79970b438a9fe8047c55365de9245b4b4f456fc7542e640b503349c3f4798595857d6da99872130f2a6ee80c817eba4a16c
   languageName: node
   linkType: hard
 
@@ -1144,7 +1202,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/css@npm:*, @emotion/css@npm:^11.10.0, @emotion/css@npm:^11.7.1":
+"@emotion/css@npm:*, @emotion/css@npm:^11.10.0, @emotion/css@npm:^11.7.1, @emotion/css@npm:^11.9.0":
   version: 11.10.5
   resolution: "@emotion/css@npm:11.10.5"
   dependencies:
@@ -2044,6 +2102,7 @@ __metadata:
     "@app/hero-fragment": "workspace:0.0.1"
     "@app/main-editor-fragment": "workspace:0.0.1"
     "@app/reviews-fragment": "workspace:0.0.1"
+    "@app/selections-and-news-fragment": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     next: 12.1.0
     react: 18.2.0
@@ -2633,14 +2692,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.0.1":
-  version: 18.0.1
-  resolution: "@types/react@npm:18.0.1"
+"@types/react@npm:17.0.47":
+  version: 17.0.47
+  resolution: "@types/react@npm:17.0.47"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: ede927ed3766fef5fec513fe75e79180bb3c97d21ca7707321e969193c596bc4a531160238546a845e4131df02ec9be7803277a268bc270156362d16b29b4ffb
+  checksum: 2e7fe0eb630cb77da03b6da308c58728c01b38e878118e9ff5cd8045181c8d4f32dc936e328f46a62cadb56e1fe4c5a911b5113584f93a99e1f35df7f059246b
   languageName: node
   linkType: hard
 
@@ -2769,6 +2828,32 @@ __metadata:
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/carousel@workspace:0.0.1, @ui/carousel@workspace:ui/carousel":
+  version: 0.0.0-use.local
+  resolution: "@ui/carousel@workspace:ui/carousel"
+  dependencies:
+    "@atls-ui-parts/dom": ^0.0.1
+    "@atls-ui-parts/swiper": ^0.0.3
+    "@emotion/css": ^11.9.0
+    "@emotion/react": ^11.4.1
+    "@emotion/styled": ^11.3.0
+    "@types/styled-system": ^5
+    framer-motion: ^7.6.2
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    styled-system: ^5.1.5
+    swiper: ^8.4.3
+  peerDependencies:
+    "@emotion/css": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    prop-types: "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
   languageName: unknown
   linkType: soft
 
@@ -4704,6 +4789,15 @@ __metadata:
   dependencies:
     esutils: ^2.0.2
   checksum: fd7673ca77fe26cd5cba38d816bc72d641f500f1f9b25b83e8ce28827fe2da7ad583a8da26ab6af85f834138cf8dae9f69b0cd6ab925f52ddab1754db44d99ce
+  languageName: node
+  linkType: hard
+
+"dom7@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "dom7@npm:4.0.4"
+  dependencies:
+    ssr-window: ^4.0.0
+  checksum: b38604f74e915b4d05b6634f9ff239a708c468180f498a28ff67f2a61233697d9bd7192703b788a24541c3591e7f1a6e83a2cbf70bc871a85e033f82e19abc31
   languageName: node
   linkType: hard
 
@@ -6676,7 +6770,7 @@ __metadata:
     "@types/eslint": ^8
     "@types/jest": ^28.1.3
     "@types/node": 16.11.10
-    "@types/react": ^18.0.1
+    "@types/react": ^17.0.47
     eslint: 8.18.0
     husky: ^8.0.1
     typescript: ^4.4.4
@@ -7120,6 +7214,15 @@ __metadata:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: 2fddd6dee994b7676f008d3ffa4ab16035a754f4bb586c61df5a22cf8c8c94017aadd360368f47d653829e0569a92b129979152ff97af23a558331e47e37cd9c
+  languageName: node
+  linkType: hard
+
+"nanoid@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "nanoid@npm:4.0.0"
+  bin:
+    nanoid: bin/nanoid.js
+  checksum: 7d5946df5c6d383694195b781ae7b5067c149d164ec71e910d6b06676309c3459b68af570b944fb5ecd5065d19df464f05700d141d70bb712ff8ca06642fd8df
   languageName: node
   linkType: hard
 
@@ -7900,7 +8003,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:18.2.0, react@npm:^18.2.0":
+"react@npm:*, react@npm:18.2.0, react@npm:^18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:
@@ -8351,6 +8454,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ssr-window@npm:^4.0.0, ssr-window@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "ssr-window@npm:4.0.2"
+  checksum: df182600927f4f3225224cf8c02338ea637c9750519505bbfb9a9236741a2a7ec088386fb948bca7b447b8303d9109e7dc7672e3de041c79ac2a0e03665af7d2
+  languageName: node
+  linkType: hard
+
 "ssri@npm:^6.0.1":
   version: 6.0.2
   resolution: "ssri@npm:6.0.2"
@@ -8605,6 +8715,16 @@ __metadata:
   version: 2.0.4
   resolution: "svg-parser@npm:2.0.4"
   checksum: b3de6653048212f2ae7afe4a423e04a76ec6d2d06e1bf7eacc618a7c5f7df7faa5105561c57b94579ec831fbbdbf5f190ba56a9205ff39ed13eabdf8ab086ddf
+  languageName: node
+  linkType: hard
+
+"swiper@npm:^8.4.3":
+  version: 8.4.4
+  resolution: "swiper@npm:8.4.4"
+  dependencies:
+    dom7: ^4.0.4
+    ssr-window: ^4.0.2
+  checksum: 1b016e2be22573f764d00963c919dc3338a47e261bce3d5b50d6e2abb5e1760c606441739b789c96a777675457e85595d76d851a80c3d34417e0c78c9886cb93
   languageName: node
   linkType: hard
 

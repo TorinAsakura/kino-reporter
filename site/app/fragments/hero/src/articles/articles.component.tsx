@@ -31,7 +31,7 @@ const Articles: FC = () => {
   }, [])
 
   return (
-    <Column width='100%' maxWidth={405}>
+    <Column width='100%' maxWidth={['100%', '100%', 405]}>
       {articles.slice(0, 4).map(({ id, title, description, date, image }, index) => (
         <Column key={id}>
           <NextLink variant='secondary' path='/'>
