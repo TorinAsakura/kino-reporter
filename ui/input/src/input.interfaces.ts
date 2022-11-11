@@ -1,8 +1,8 @@
 import { InputProps as BaseInputProps } from '@atls-ui-parts/input'
 
-export type InputVariant = 'primary' | 'ghost'
+export type InputVariant = 'primary' | 'secondary' | 'ghost'
 
-export type InputSize = 'normal' | 'giant'
+export type InputSize = 'normal' | 'giant' | 'semiNormal'
 
 export interface InputProps extends BaseInputProps {
   variant?: InputVariant
@@ -11,5 +11,9 @@ export interface InputProps extends BaseInputProps {
   textAlign?: string
   hint?: string
   maxLength?: number
+  errorText?: string
   textarea?: boolean
+  errorMessage?: string
+  isMessageSent?: boolean
+  setIsMessageSent?: (isMessageSent: boolean) => void
 }

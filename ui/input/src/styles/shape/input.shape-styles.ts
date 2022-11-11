@@ -13,6 +13,16 @@ const shapeNormalSizeStyles = createShapeStyles({
   paddingRight: 12,
 })
 
+const shapeSemiNormalSizeStyles = createShapeStyles({
+  fontFamily: prop('theme.fonts.primary'),
+  fontWeight: prop('theme.fontWeights.normal'),
+  size: 48,
+  fontSize: prop('theme.fontSizes.semiRegular'),
+  rounding: prop('theme.radii.intermediate') as unknown as number,
+  paddingLeft: 12,
+  paddingRight: 4,
+})
+
 const shapeGiantSizeStyles = createShapeStyles({
   fontFamily: prop('theme.fonts.primary'),
   fontWeight: prop('theme.fontWeights.bold'),
@@ -26,4 +36,5 @@ const shapeGiantSizeStyles = createShapeStyles({
 export const shapeStyles = switchProp(prop('size', 'normal'), {
   normal: shapeNormalSizeStyles,
   giant: shapeGiantSizeStyles,
+  semiNormal: shapeSemiNormalSizeStyles,
 })

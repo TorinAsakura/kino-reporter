@@ -40,6 +40,42 @@ const appearancePrimaryErrorStyles = createAppearanceStyles({
   borderColor: prop('theme.colors.input.primary.error.border'),
 })
 
+const appearanceSecondaryDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.input.secondary.default.font'),
+  backgroundColor: prop('theme.colors.input.secondary.default.background'),
+  borderColor: prop('theme.colors.input.secondary.default.border'),
+})
+
+const appearanceSecondaryHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.input.secondary.hover.font'),
+  backgroundColor: prop('theme.colors.input.secondary.hover.background'),
+  borderColor: prop('theme.colors.input.secondary.hover.border'),
+})
+
+const appearanceSecondaryPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.input.secondary.pressed.font'),
+  backgroundColor: prop('theme.colors.input.secondary.pressed.background'),
+  borderColor: prop('theme.colors.input.secondary.pressed.border'),
+})
+
+const appearanceSecondaryFocusStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.input.secondary.focus.font'),
+  backgroundColor: prop('theme.colors.input.secondary.focus.background'),
+  borderColor: prop('theme.colors.input.secondary.focus.border'),
+})
+
+const appearanceSecondaryDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.input.secondary.disabled.font'),
+  backgroundColor: prop('theme.colors.input.secondary.disabled.background'),
+  borderColor: prop('theme.colors.input.secondary.disabled.border'),
+})
+
+const appearanceSecondaryErrorStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.input.secondary.error.font'),
+  backgroundColor: prop('theme.colors.input.secondary.error.background'),
+  borderColor: prop('theme.colors.input.secondary.error.border'),
+})
+
 const appearanceStyles = switchProp(prop('variant', 'primary'), {
   primary: ifProp(
     prop('disabled', false),
@@ -54,6 +90,27 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
           prop('focus', false),
           appearancePrimaryFocusStyles,
           ifProp(prop('hover', false), appearancePrimaryHoverStyles, appearancePrimaryDefaultStyles)
+        )
+      )
+    )
+  ),
+  secondary: ifProp(
+    prop('disabled', false),
+    appearanceSecondaryDisabledStyles,
+    ifProp(
+      prop('error', false),
+      appearanceSecondaryErrorStyles,
+      ifProp(
+        prop('pressed', false),
+        appearanceSecondaryPressedStyles,
+        ifProp(
+          prop('focus', false),
+          appearanceSecondaryFocusStyles,
+          ifProp(
+            prop('hover', false),
+            appearanceSecondaryHoverStyles,
+            appearanceSecondaryDefaultStyles
+          )
         )
       )
     )
