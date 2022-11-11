@@ -97,7 +97,6 @@ const Newsletter: FC = () => {
             </Box>
           </Column>
         </Box>
-        <Layout flexBasis={[24, 24, 64]} />
       </Column>
       <Layout flexBasis={[16, 16, 80]} flexShrink={0} />
     </Box>

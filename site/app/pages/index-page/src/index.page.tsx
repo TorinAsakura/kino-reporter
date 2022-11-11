@@ -5,6 +5,7 @@ import { Header }            from '@app/header-fragment'
 import { PromoLine }         from '@app/header-fragment'
 import { Hero }              from '@app/hero-fragment'
 import { Interviews }        from '@app/interviews-fragment'
+import { Journal }           from '@app/journal-fragment'
 import { MainEditor }        from '@app/main-editor-fragment'
 import { Newsletter }        from '@app/newsletter-fragment'
 import { Reviews }           from '@app/reviews-fragment'
@@ -24,6 +25,7 @@ const IndexPage = () => (
     <Interviews />
     <FilmsAndSerials />
     <Newsletter />
+    <Journal />
   </Column>
 )
 
