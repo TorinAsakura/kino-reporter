@@ -17,7 +17,6 @@ import { Text }                 from '@ui/text'
 import { TextEllipsis }         from '@ui/text'
 import { useMockedMainArticle } from '@shared/data'
 import { formattedDate }        from '@shared/utils'
-import { useHover }             from '@ui/utils'
 
 const MainPreview: FC = () => {
   const { mainArticle: mainArticleData } = useMockedMainArticle()
@@ -30,28 +29,19 @@ const MainPreview: FC = () => {
     // eslint-disable-next-line
   }, [])
 
-  const [hover, hoverProps] = useHover()
-
   return (
     <BoxGradient
       width={['100%', '100%', 843]}
       height={[320, 320, 576]}
       borderRadius={['bottomSide', 'bottomSide', 'medium']}
       zIndex={10}
-      gradient={hover ? 'lightBlack' : 'black'}
+      backgroundColor='gray'
       position='relative'
       overflow='hidden'
       // @ts-ignore
       cursor='pointer'
-      {...hoverProps}
     >
-      <BoxGradient
-        opacity={hover ? 0.9 : 1}
-        width='100%'
-        height='100%'
-        zIndex='-1'
-        position='absolute'
-      >
+      <BoxGradient width='100%' height='100%' zIndex='-1' position='absolute'>
         <ImageBlock
           // @ts-ignore
           objectPosition='center'
