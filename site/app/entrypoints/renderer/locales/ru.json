@@ -10,5 +10,10 @@
   "header.articles": "Статьи",
   "header.persons": "Персоны",
   "header.films": "Фильмы",
-  "header.all_results": "Все результаты"
+  "header.all_results": "Все результаты",
+  "hero.more": "Подробнее",
+  "main_editor.main_editor": "Главный редактор",
+  "main_editor.description": "Мария Лемешева – о престижной кинопремии «Событие года» и будущем киноиндустрии",
+  "main_editor.read": "Читать",
+  "main_editor.all_articles": "Все статьи"
 }

@@ -81,7 +81,7 @@ const Films: FC<FilmsProps> = ({ filteredFilms }) => (
                   <Layout flexBasis={5} flexShrink={0} />
                   <Layout>
                     <Text color='text.tertiary' fontSize='small' lineHeight='extra'>
-                      {formattedDate(creationDate)}
+                      {formattedDate('onlyYear', creationDate)}
                     </Text>
                   </Layout>
                 </Row>

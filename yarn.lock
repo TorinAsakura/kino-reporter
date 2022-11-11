@@ -211,6 +211,77 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@app/hero-fragment@workspace:0.0.1, @app/hero-fragment@workspace:site/app/fragments/hero":
+  version: 0.0.0-use.local
+  resolution: "@app/hero-fragment@workspace:site/app/fragments/hero"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@app/store": "workspace:0.0.1"
+    "@emotion/react": ^11.10.0
+    "@emotion/styled": ^11.10.0
+    "@shared/data": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
+    "@types/styled-system": ^5
+    "@ui/background": "workspace:0.0.1"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/divider": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    framer-motion: ^7.6.2
+    next: 12.1.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-intl: 5.24.3
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/main-editor-fragment@workspace:0.0.1, @app/main-editor-fragment@workspace:site/app/fragments/main-editor":
+  version: 0.0.0-use.local
+  resolution: "@app/main-editor-fragment@workspace:site/app/fragments/main-editor"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@app/store": "workspace:0.0.1"
+    "@emotion/react": ^11.10.0
+    "@emotion/styled": ^11.10.0
+    "@shared/data": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
+    "@types/styled-system": ^5
+    "@ui/background": "workspace:0.0.1"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    next: 12.1.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-intl: 5.24.3
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@app/renderer-entrypoint@workspace:site/app/entrypoints/renderer":
   version: 0.0.0-use.local
   resolution: "@app/renderer-entrypoint@workspace:site/app/entrypoints/renderer"
@@ -1936,6 +2007,8 @@ __metadata:
   resolution: "@site/index-page@workspace:site/app/pages/index-page"
   dependencies:
     "@app/header-fragment": "workspace:0.0.1"
+    "@app/hero-fragment": "workspace:0.0.1"
+    "@app/main-editor-fragment": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     next: 12.1.0
     react: 18.2.0
@@ -2619,6 +2692,21 @@ __metadata:
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
+    react: ^18.2.0
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/background@workspace:0.0.1, @ui/background@workspace:ui/background":
+  version: 0.0.0-use.local
+  resolution: "@ui/background@workspace:ui/background"
+  dependencies:
+    "@emotion/react": ^11.10.0
+    "@emotion/styled": ^11.10.0
+    "@ui/layout": "workspace:0.0.1"
     react: ^18.2.0
   peerDependencies:
     "@emotion/react": "*"

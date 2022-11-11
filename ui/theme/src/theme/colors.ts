@@ -3,6 +3,7 @@ const colors = {
   tertiary: 'rgba(172, 173, 183, 1)',
   secondary: 'rgba(117, 118, 130, 1)',
   iceCube: 'rgba(255, 255, 255, 0.2)',
+  gray: 'rgba(235, 235, 235, 1)',
   inverseSecondary: 'rgba(255, 255, 255, 0.65)',
   accent: 'rgba(224, 29, 81, 1)',
   semiBlack: 'rgba(0, 0, 0, 0.5)',
@@ -10,6 +11,14 @@ const colors = {
   lightGray: 'rgba(10, 10, 11, 0.04)',
   lightWhite: 'rgba(255, 255, 255, 0.15)',
   lightRed: 'rgba(224, 29, 81, 0.1)',
+  gradient: {
+    white:
+      'linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), rgba(255, 255, 255, 0.2)',
+    black: 'linear-gradient(180deg, rgba(0, 0, 0, 0.125) 24.31%, rgba(0, 0, 0, 0.5) 77.44%)',
+    lightBlack: 'linear-gradient(180deg, rgba(0, 0, 0, 0.075) 24.31%, rgba(0, 0, 0, 0.3) 77.44%)',
+    purple:
+      'linear-gradient(180deg, #2D2D37 0%, rgba(45, 45, 55, 0) 25.58%, rgba(45, 45, 55, 0) 71.57%, #2D2D37 100%)',
+  },
   background: {
     white: 'rgba(255, 255, 255, 1)',
     dark: 'rgba(45, 45, 55, 1)',

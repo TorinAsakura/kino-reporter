@@ -1,14 +1,7 @@
-export interface Article {
-  id: string
-  date: Date
-  title: string
-  description: string
-  image: {
-    imageUrl: string
-    altText: string
-  }
-}
+import { Article } from '@shared/data'
+
+export interface IArticle extends Article {}
 
 export interface ArticlesProps {
-  filteredArticles: Article[]
+  filteredArticles: IArticle[]
 }

@@ -1,5 +1,5 @@
 export interface RepeaterProps {
   quantity?: number
   items?: Array<any>
-  children: () => any
+  children: (item: any, index?: number) => any
 }

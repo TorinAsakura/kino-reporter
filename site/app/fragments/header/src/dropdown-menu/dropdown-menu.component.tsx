@@ -11,6 +11,8 @@ import { Layout }             from '@ui/layout'
 import { Row }                from '@ui/layout'
 import { NextLink }           from '@ui/link'
 import { Text }               from '@ui/text'
+import { Hover }              from '@ui/utils'
+import { getLinkColor }       from '@ui/link'
 
 import { Promo }              from './promo'
 import { useNavigationLinks } from '../data'
@@ -38,25 +40,33 @@ const DropdownMenu: FC = () => {
               {links.drawer.map(({ title, path }, index) => (
                 <React.Fragment key={title}>
                   <NextLink variant='secondary' path={path}>
-                    <Row alignItems='center'>
-                      <Layout>
-                        <Text
-                          fontWeight='medium'
-                          fontFamily='lora'
-                          fontSize={['xl', 'xl', 'big']}
-                          lineHeight='compact'
-                        >
-                          {title}
-                        </Text>
-                      </Layout>
-                      <Layout flexBasis={6} />
-                      <Column>
-                        <Layout flexBasis={5} />
-                        <Layout alignItems='center'>
-                          <ArrowRightIcon width={18} height={20} />
-                        </Layout>
-                      </Column>
-                    </Row>
+                    <Hover>
+                      {(hover, hoverProps) => (
+                        <Row alignItems='center' {...hoverProps}>
+                          <Layout>
+                            <Text
+                              fontWeight='medium'
+                              fontFamily='lora'
+                              fontSize={['xl', 'xl', 'big']}
+                              lineHeight='compact'
+                            >
+                              {title}
+                            </Text>
+                          </Layout>
+                          <Layout flexBasis={6} />
+                          <Column>
+                            <Layout flexBasis={5} />
+                            <Layout alignItems='center'>
+                              <ArrowRightIcon
+                                color={getLinkColor('primary', hover)}
+                                width={18}
+                                height={20}
+                              />
+                            </Layout>
+                          </Column>
+                        </Row>
+                      )}
+                    </Hover>
                   </NextLink>
                   <Layout flexBasis={links.drawer.length - 1 !== index ? 32 : 0} />
                 </React.Fragment>

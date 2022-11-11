@@ -19,9 +19,6 @@ const appearanceLinkStyles: styleFn = ({ theme }) => ({
     color: theme.colors.links.primary.default.font,
     '&:hover': {
       color: theme.colors.links.primary.hover.font,
-      '& svg > path:only-of-type': {
-        fill: theme.colors.links.primary.hover.font,
-      },
     },
     '&:active': {
       color: theme.colors.links.primary.pressed.font,
@@ -31,9 +28,6 @@ const appearanceLinkStyles: styleFn = ({ theme }) => ({
     color: theme.colors.links.secondary.default.font,
     '&:hover': {
       color: theme.colors.links.secondary.hover.font,
-      '& svg > path:only-of-type': {
-        fill: theme.colors.links.secondary.hover.font,
-      },
     },
     '&:active': {
       color: theme.colors.links.secondary.pressed.font,
@@ -43,9 +37,6 @@ const appearanceLinkStyles: styleFn = ({ theme }) => ({
     color: theme.colors.links.tertiary.default.font,
     '&:hover': {
       color: theme.colors.links.tertiary.hover.font,
-      '& svg > path:only-of-type': {
-        fill: theme.colors.links.tertiary.hover.font,
-      },
     },
     '&:active': {
       color: theme.colors.links.tertiary.pressed.font,
@@ -55,9 +46,6 @@ const appearanceLinkStyles: styleFn = ({ theme }) => ({
     color: theme.colors.links.mallard.default.font,
     '&:hover': {
       color: theme.colors.links.mallard.hover.font,
-      '& svg > path:only-of-type': {
-        fill: theme.colors.links.mallard.hover.font,
-      },
     },
     '&:active': {
       color: theme.colors.links.mallard.pressed.font,
@@ -67,9 +55,6 @@ const appearanceLinkStyles: styleFn = ({ theme }) => ({
     color: theme.colors.links.yam.default.font,
     '&:hover': {
       color: theme.colors.links.yam.hover.font,
-      '& svg > path:only-of-type': {
-        fill: theme.colors.links.yam.hover.font,
-      },
     },
     '&:active': {
       color: theme.colors.links.yam.pressed.font,
@@ -79,9 +64,6 @@ const appearanceLinkStyles: styleFn = ({ theme }) => ({
     color: theme.colors.links.newt.default.font,
     '&:hover': {
       color: theme.colors.links.newt.hover.font,
-      '& svg > path:only-of-type': {
-        fill: theme.colors.links.newt.hover.font,
-      },
     },
     '&:active': {
       color: theme.colors.links.newt.pressed.font,

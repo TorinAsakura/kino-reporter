@@ -1,16 +1,7 @@
-export interface Film {
-  id: string
-  genre: string
-  title: string
-  country: string
-  rating: string
-  creationDate: Date
-  image: {
-    imageUrl: string
-    altText: string
-  }
-}
+import { Film } from '@shared/data'
+
+export interface IFilm extends Film {}
 
 export interface FilmsProps {
-  filteredFilms: Film[]
+  filteredFilms: IFilm[]
 }
