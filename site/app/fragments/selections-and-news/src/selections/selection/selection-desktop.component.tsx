@@ -1,10 +1,8 @@
 import React              from 'react'
 import { FC }             from 'react'
 
-import { BoxGradient }    from '@ui/background'
 import { Condition }      from '@ui/condition'
-import { ImageBlock }     from '@ui/image'
-import { Box }            from '@ui/layout'
+import { ImageCard }      from '@ui/image-card'
 import { Column }         from '@ui/layout'
 import { Layout }         from '@ui/layout'
 import { Row }            from '@ui/layout'
@@ -42,47 +40,15 @@ const SelectionDesktop: FC<SelectionProps> = ({
         <NextLink variant='secondary' path='/'>
           <Column fill>
             <Row>
-              <Box
+              <ImageCard
                 minWidth={260}
                 maxWidth={260}
                 height={180}
-                backgroundColor='gray'
-                borderRadius='intermediate'
-                overflow='hidden'
-                zIndex={10}
-                position='relative'
-              >
-                <Box
-                  minWidth={260}
-                  maxWidth={260}
-                  height={180}
-                  zIndex='-1'
-                  position='absolute'
-                  display='flex'
-                >
-                  <ImageBlock src={imageUrl} alt={altText} />
-                </Box>
-                <Layout flexBasis={12} />
-                <Column>
-                  <Layout flexBasis={12} />
-                  <BoxGradient
-                    alignItems='center'
-                    p='8px 10px'
-                    blur={2}
-                    gradient='white'
-                    borderRadius='normal'
-                  >
-                    <Text
-                      color='text.white'
-                      fontWeight='semiBold'
-                      fontSize='atomic'
-                      textTransform='uppercase'
-                    >
-                      {title}
-                    </Text>
-                  </BoxGradient>
-                </Column>
-              </Box>
+                imageUrl={imageUrl}
+                altText={altText}
+                indent={12}
+                title={title}
+              />
             </Row>
             <Layout flexBasis={16} flexShrink={0} />
             <Column fill>
@@ -106,6 +72,9 @@ const SelectionDesktop: FC<SelectionProps> = ({
                 </Text>
               </Row>
             </Column>
+            <Condition match={index !== 0}>
+              <Layout flexBasis={32} flexShrink={0} />
+            </Condition>
           </Column>
         </NextLink>
       </Condition>

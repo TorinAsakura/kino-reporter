@@ -9,6 +9,7 @@
   "devDependencies": {
     "@app/header-fragment": "workspace:0.0.1",
     "@app/hero-fragment": "workspace:0.0.1",
+    "@app/interviews-fragment": "workspace:0.0.1",
     "@app/main-editor-fragment": "workspace:0.0.1",
     "@app/reviews-fragment": "workspace:0.0.1",
     "@app/selections-and-news-fragment": "workspace:0.0.1",

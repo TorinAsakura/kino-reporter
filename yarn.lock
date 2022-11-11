@@ -248,6 +248,42 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@app/interviews-fragment@workspace:0.0.1, @app/interviews-fragment@workspace:site/app/fragments/interviews":
+  version: 0.0.0-use.local
+  resolution: "@app/interviews-fragment@workspace:site/app/fragments/interviews"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@emotion/react": ^11.10.0
+    "@emotion/styled": ^11.10.0
+    "@shared/data": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
+    "@types/styled-system": ^5
+    "@ui/background": "workspace:0.0.1"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/divider": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/image-card": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    next: 12.1.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-intl: 5.24.3
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@app/main-editor-fragment@workspace:0.0.1, @app/main-editor-fragment@workspace:site/app/fragments/main-editor":
   version: 0.0.0-use.local
   resolution: "@app/main-editor-fragment@workspace:site/app/fragments/main-editor"
@@ -360,6 +396,7 @@ __metadata:
     "@ui/divider": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
+    "@ui/image-card": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
@@ -2100,6 +2137,7 @@ __metadata:
   dependencies:
     "@app/header-fragment": "workspace:0.0.1"
     "@app/hero-fragment": "workspace:0.0.1"
+    "@app/interviews-fragment": "workspace:0.0.1"
     "@app/main-editor-fragment": "workspace:0.0.1"
     "@app/reviews-fragment": "workspace:0.0.1"
     "@app/selections-and-news-fragment": "workspace:0.0.1"
@@ -2958,6 +2996,27 @@ __metadata:
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/image-card@workspace:0.0.1, @ui/image-card@workspace:ui/image-card":
+  version: 0.0.0-use.local
+  resolution: "@ui/image-card@workspace:ui/image-card"
+  dependencies:
+    "@emotion/react": ^11.10.0
+    "@emotion/styled": ^11.10.0
+    "@types/react-dom": ^18.0.6
+    "@types/styled-system": ^5
+    "@ui/background": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
   languageName: unknown
   linkType: soft
 

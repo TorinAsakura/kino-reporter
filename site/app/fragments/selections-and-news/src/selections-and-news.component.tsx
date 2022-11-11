@@ -21,7 +21,7 @@ const SelectionsAndNews: FC = () => (
           <News />
         </Layout>
       </Row>
-      <Layout flexBasis={[20, 20, 32]} />
+      <Layout flexBasis={[20, 20, 16]} />
     </Column>
     <Layout flexBasis={[0, 0, 80]} flexShrink={0} />
   </Box>

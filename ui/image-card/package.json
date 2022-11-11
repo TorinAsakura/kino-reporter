@@ -1,0 +1,24 @@
+{
+  "name": "@ui/image-card",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@ui/background": "workspace:0.0.1",
+    "@ui/image": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
+    "styled-system": "^5.1.5"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@types/react-dom": "^18.0.6",
+    "@types/styled-system": "^5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*"
+  }
+}
