@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  yarn:
+    image: node:16.13
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn
+
+  app:
+    image: node:16.13
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn workspace @app/renderer-entrypoint dev
+    networks:
+      - default
+    ports:
+      - 3000:3000
