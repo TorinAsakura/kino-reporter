@@ -1,5 +1,6 @@
 import React                 from 'react'
 
+import { FilmsAndSerials }   from '@app/films-and-serials-fragment'
 import { Header }            from '@app/header-fragment'
 import { PromoLine }         from '@app/header-fragment'
 import { Hero }              from '@app/hero-fragment'
@@ -20,6 +21,7 @@ const IndexPage = () => (
     <Reviews />
     <SelectionsAndNews />
     <Interviews />
+    <FilmsAndSerials />
   </Column>
 )
 

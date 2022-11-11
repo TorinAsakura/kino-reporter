@@ -28,9 +28,6 @@ export const GlobalStyles = () => (
           flex-direction: column;
           background-color: ${theme.colors.background.white};
         }
-        .swiper-slide {
-        width: auto !important;
-        }
       `}
   />
 )
