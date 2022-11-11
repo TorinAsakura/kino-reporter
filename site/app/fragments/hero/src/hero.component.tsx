@@ -10,7 +10,7 @@ import { MainPreview } from './main-preview'
 
 const Hero: FC = () => (
   <Box width='100%'>
-    <Layout flexBasis={[0, 0, 80]} />
+    <Layout flexBasis={[0, 0, 80]} flexShrink={0} />
     <Column fill>
       <Layout flexBasis={[0, 0, 48]} />
       <Box width='100%' flexDirection={['column', 'column', 'row']} justifyContent='center'>
@@ -23,7 +23,7 @@ const Hero: FC = () => (
         </Layout>
       </Box>
     </Column>
-    <Layout flexBasis={[0, 0, 80]} />
+    <Layout flexBasis={[0, 0, 80]} flexShrink={0} />
   </Box>
 )
 
