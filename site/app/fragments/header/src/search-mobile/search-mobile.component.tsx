@@ -61,7 +61,7 @@ const SearchMobile: FC = () => {
               type='search'
               value={searchValue}
               onChange={updateSearchValueAction}
-              onKeyPress={handleKeyPress}
+              onKeyDown={handleKeyPress}
               placeholder={intl.formatMessage({
                 id: 'header.materials_films_persons',
                 defaultMessage: 'Материалы, фильмы, персоны...',
