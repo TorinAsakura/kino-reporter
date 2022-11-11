@@ -28,7 +28,7 @@ const SearchHistory: FC<SearchHistoryProps> = ({ title, index }) => {
           </Layout>
           <Layout flexBasis={8} />
           <Layout width={240} overflow='hidden'>
-            <Text fontWeight='medium' fontSize='small' lineHeight='compact'>
+            <Text color='text.primary' fontWeight='medium' fontSize='small' lineHeight='compact'>
               {title}
             </Text>
           </Layout>
