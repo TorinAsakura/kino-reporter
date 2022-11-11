@@ -49,6 +49,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:site/app/fragments/interviews"\
       },\
       {\
+        "name": "@app/journal-fragment",\
+        "reference": "workspace:site/app/fragments/journal"\
+      },\
+      {\
         "name": "@app/main-editor-fragment",\
         "reference": "workspace:site/app/fragments/main-editor"\
       },\
@@ -148,6 +152,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@app/header-fragment", ["virtual:2765ab5b658a273cceddc3aa386e756fdb0c362073f0ea24df1b5f75ab29bad8af797f5d07004fe263d1e1ea31206dbf7cdcb36be7bbef0d6cff88ab85dbfa25#workspace:site/app/fragments/header", "virtual:9b1604cf5a2338e9878791f71f65c9aaa2d9d3f75e11ced00c7d675f1ff86381f59938db036e3df12899110ebcb0fb7de4ffed47ac492bd4793e2fe93998fab0#workspace:site/app/fragments/header", "workspace:site/app/fragments/header"]],\
       ["@app/hero-fragment", ["virtual:2765ab5b658a273cceddc3aa386e756fdb0c362073f0ea24df1b5f75ab29bad8af797f5d07004fe263d1e1ea31206dbf7cdcb36be7bbef0d6cff88ab85dbfa25#workspace:site/app/fragments/hero", "virtual:9b1604cf5a2338e9878791f71f65c9aaa2d9d3f75e11ced00c7d675f1ff86381f59938db036e3df12899110ebcb0fb7de4ffed47ac492bd4793e2fe93998fab0#workspace:site/app/fragments/hero", "workspace:site/app/fragments/hero"]],\
       ["@app/interviews-fragment", ["virtual:2765ab5b658a273cceddc3aa386e756fdb0c362073f0ea24df1b5f75ab29bad8af797f5d07004fe263d1e1ea31206dbf7cdcb36be7bbef0d6cff88ab85dbfa25#workspace:site/app/fragments/interviews", "virtual:9b1604cf5a2338e9878791f71f65c9aaa2d9d3f75e11ced00c7d675f1ff86381f59938db036e3df12899110ebcb0fb7de4ffed47ac492bd4793e2fe93998fab0#workspace:site/app/fragments/interviews", "workspace:site/app/fragments/interviews"]],\
+      ["@app/journal-fragment", ["virtual:2765ab5b658a273cceddc3aa386e756fdb0c362073f0ea24df1b5f75ab29bad8af797f5d07004fe263d1e1ea31206dbf7cdcb36be7bbef0d6cff88ab85dbfa25#workspace:site/app/fragments/journal", "virtual:9b1604cf5a2338e9878791f71f65c9aaa2d9d3f75e11ced00c7d675f1ff86381f59938db036e3df12899110ebcb0fb7de4ffed47ac492bd4793e2fe93998fab0#workspace:site/app/fragments/journal", "workspace:site/app/fragments/journal"]],\
       ["@app/main-editor-fragment", ["virtual:2765ab5b658a273cceddc3aa386e756fdb0c362073f0ea24df1b5f75ab29bad8af797f5d07004fe263d1e1ea31206dbf7cdcb36be7bbef0d6cff88ab85dbfa25#workspace:site/app/fragments/main-editor", "virtual:9b1604cf5a2338e9878791f71f65c9aaa2d9d3f75e11ced00c7d675f1ff86381f59938db036e3df12899110ebcb0fb7de4ffed47ac492bd4793e2fe93998fab0#workspace:site/app/fragments/main-editor", "workspace:site/app/fragments/main-editor"]],\
       ["@app/newsletter-fragment", ["virtual:2765ab5b658a273cceddc3aa386e756fdb0c362073f0ea24df1b5f75ab29bad8af797f5d07004fe263d1e1ea31206dbf7cdcb36be7bbef0d6cff88ab85dbfa25#workspace:site/app/fragments/newsletter", "virtual:9b1604cf5a2338e9878791f71f65c9aaa2d9d3f75e11ced00c7d675f1ff86381f59938db036e3df12899110ebcb0fb7de4ffed47ac492bd4793e2fe93998fab0#workspace:site/app/fragments/newsletter", "workspace:site/app/fragments/newsletter"]],\
       ["@app/renderer-entrypoint", ["workspace:site/app/entrypoints/renderer"]],\
@@ -1166,6 +1171,115 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ui/image-card", "virtual:9a44071ce742e1e629cee873454511195df0be12296fc0fedbc5a20e0ec6a663ff09ea9eaca3b0cd0f98d449bcf2ec224ddf7eb41381cbb1e76d16cbd11dace9#workspace:ui/image-card"],\
             ["@ui/layout", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#workspace:ui/layout"],\
             ["@ui/link", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#workspace:ui/link"],\
+            ["@ui/text", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#workspace:ui/text"],\
+            ["@ui/utils", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#workspace:ui/utils"],\
+            ["next", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#npm:12.1.0"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:36a3fd85145f43fdd7323fd2ccf4552c48d8610db518650de4b944150d734276d3558ee522a0ec13b727e2410a0ce3996c9cecdb30484d2c3b91e40f20412e23#npm:18.2.0"],\
+            ["react-intl", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#npm:5.24.3"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@app/journal-fragment", [\
+        ["virtual:2765ab5b658a273cceddc3aa386e756fdb0c362073f0ea24df1b5f75ab29bad8af797f5d07004fe263d1e1ea31206dbf7cdcb36be7bbef0d6cff88ab85dbfa25#workspace:site/app/fragments/journal", {\
+          "packageLocation": "./.yarn/__virtual__/@app-journal-fragment-virtual-60cbcb50f2/1/site/app/fragments/journal/",\
+          "packageDependencies": [\
+            ["@app/journal-fragment", "virtual:2765ab5b658a273cceddc3aa386e756fdb0c362073f0ea24df1b5f75ab29bad8af797f5d07004fe263d1e1ea31206dbf7cdcb36be7bbef0d6cff88ab85dbfa25#workspace:site/app/fragments/journal"],\
+            ["@apollo/client", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#npm:3.7.1"],\
+            ["@emotion/react", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#npm:11.10.5"],\
+            ["@emotion/styled", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#npm:11.10.5"],\
+            ["@shared/data", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#workspace:shared/data"],\
+            ["@shared/utils", "workspace:shared/utils"],\
+            ["@types/apollo__client", null],\
+            ["@types/emotion__react", null],\
+            ["@types/emotion__styled", null],\
+            ["@types/next", null],\
+            ["@types/react", null],\
+            ["@types/react-dom", null],\
+            ["@types/react-intl", null],\
+            ["@types/styled-system", "npm:5.1.15"],\
+            ["@ui/button", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#workspace:ui/button"],\
+            ["@ui/condition", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#workspace:ui/condition"],\
+            ["@ui/image", "workspace:ui/image"],\
+            ["@ui/layout", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#workspace:ui/layout"],\
+            ["@ui/text", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#workspace:ui/text"],\
+            ["@ui/utils", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#workspace:ui/utils"],\
+            ["next", "virtual:2765ab5b658a273cceddc3aa386e756fdb0c362073f0ea24df1b5f75ab29bad8af797f5d07004fe263d1e1ea31206dbf7cdcb36be7bbef0d6cff88ab85dbfa25#npm:12.1.0"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:36a3fd85145f43fdd7323fd2ccf4552c48d8610db518650de4b944150d734276d3558ee522a0ec13b727e2410a0ce3996c9cecdb30484d2c3b91e40f20412e23#npm:18.2.0"],\
+            ["react-intl", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#npm:5.24.3"]\
+          ],\
+          "packagePeers": [\
+            "@types/apollo__client",\
+            "@types/emotion__react",\
+            "@types/emotion__styled",\
+            "@types/next",\
+            "@types/react-dom",\
+            "@types/react-intl",\
+            "@types/react",\
+            "next",\
+            "react-intl",\
+            "react"\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:9b1604cf5a2338e9878791f71f65c9aaa2d9d3f75e11ced00c7d675f1ff86381f59938db036e3df12899110ebcb0fb7de4ffed47ac492bd4793e2fe93998fab0#workspace:site/app/fragments/journal", {\
+          "packageLocation": "./.yarn/__virtual__/@app-journal-fragment-virtual-25d069de4b/1/site/app/fragments/journal/",\
+          "packageDependencies": [\
+            ["@app/journal-fragment", "virtual:9b1604cf5a2338e9878791f71f65c9aaa2d9d3f75e11ced00c7d675f1ff86381f59938db036e3df12899110ebcb0fb7de4ffed47ac492bd4793e2fe93998fab0#workspace:site/app/fragments/journal"],\
+            ["@apollo/client", "virtual:1e297480697ad7dd481919276bb7e9977a8a4f95d55ba215331d6c0aaab74146126896c41e46fbab583bb60753a71a82804c5590bcfcdd3df857c73d5519e2c0#npm:3.7.1"],\
+            ["@emotion/react", "virtual:b57184b50153eba2f9c640d89297aa11f76ff3f1619cb06b4a5ea1d2ba66a0755cbb2b7da4541db4579af890aba412fe67289ebd1dd4374160d8d8d9f20e301a#npm:11.10.5"],\
+            ["@emotion/styled", "virtual:b57184b50153eba2f9c640d89297aa11f76ff3f1619cb06b4a5ea1d2ba66a0755cbb2b7da4541db4579af890aba412fe67289ebd1dd4374160d8d8d9f20e301a#npm:11.10.5"],\
+            ["@shared/data", "virtual:1e297480697ad7dd481919276bb7e9977a8a4f95d55ba215331d6c0aaab74146126896c41e46fbab583bb60753a71a82804c5590bcfcdd3df857c73d5519e2c0#workspace:shared/data"],\
+            ["@shared/utils", "workspace:shared/utils"],\
+            ["@types/apollo__client", null],\
+            ["@types/emotion__react", null],\
+            ["@types/emotion__styled", null],\
+            ["@types/next", null],\
+            ["@types/react", "npm:17.0.47"],\
+            ["@types/react-dom", null],\
+            ["@types/react-intl", null],\
+            ["@types/styled-system", "npm:5.1.15"],\
+            ["@ui/button", "virtual:1e297480697ad7dd481919276bb7e9977a8a4f95d55ba215331d6c0aaab74146126896c41e46fbab583bb60753a71a82804c5590bcfcdd3df857c73d5519e2c0#workspace:ui/button"],\
+            ["@ui/condition", "virtual:1e297480697ad7dd481919276bb7e9977a8a4f95d55ba215331d6c0aaab74146126896c41e46fbab583bb60753a71a82804c5590bcfcdd3df857c73d5519e2c0#workspace:ui/condition"],\
+            ["@ui/image", "workspace:ui/image"],\
+            ["@ui/layout", "virtual:1e297480697ad7dd481919276bb7e9977a8a4f95d55ba215331d6c0aaab74146126896c41e46fbab583bb60753a71a82804c5590bcfcdd3df857c73d5519e2c0#workspace:ui/layout"],\
+            ["@ui/text", "virtual:1e297480697ad7dd481919276bb7e9977a8a4f95d55ba215331d6c0aaab74146126896c41e46fbab583bb60753a71a82804c5590bcfcdd3df857c73d5519e2c0#workspace:ui/text"],\
+            ["@ui/utils", "virtual:1e297480697ad7dd481919276bb7e9977a8a4f95d55ba215331d6c0aaab74146126896c41e46fbab583bb60753a71a82804c5590bcfcdd3df857c73d5519e2c0#workspace:ui/utils"],\
+            ["next", "virtual:b57184b50153eba2f9c640d89297aa11f76ff3f1619cb06b4a5ea1d2ba66a0755cbb2b7da4541db4579af890aba412fe67289ebd1dd4374160d8d8d9f20e301a#npm:12.1.0"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:b57184b50153eba2f9c640d89297aa11f76ff3f1619cb06b4a5ea1d2ba66a0755cbb2b7da4541db4579af890aba412fe67289ebd1dd4374160d8d8d9f20e301a#npm:18.2.0"],\
+            ["react-intl", "virtual:b57184b50153eba2f9c640d89297aa11f76ff3f1619cb06b4a5ea1d2ba66a0755cbb2b7da4541db4579af890aba412fe67289ebd1dd4374160d8d8d9f20e301a#npm:5.24.3"]\
+          ],\
+          "packagePeers": [\
+            "@types/apollo__client",\
+            "@types/emotion__react",\
+            "@types/emotion__styled",\
+            "@types/next",\
+            "@types/react-dom",\
+            "@types/react-intl",\
+            "@types/react",\
+            "next",\
+            "react-intl",\
+            "react"\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["workspace:site/app/fragments/journal", {\
+          "packageLocation": "./site/app/fragments/journal/",\
+          "packageDependencies": [\
+            ["@app/journal-fragment", "workspace:site/app/fragments/journal"],\
+            ["@apollo/client", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#npm:3.7.1"],\
+            ["@emotion/react", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#npm:11.10.5"],\
+            ["@emotion/styled", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#npm:11.10.5"],\
+            ["@shared/data", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#workspace:shared/data"],\
+            ["@shared/utils", "workspace:shared/utils"],\
+            ["@types/styled-system", "npm:5.1.15"],\
+            ["@ui/button", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#workspace:ui/button"],\
+            ["@ui/condition", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#workspace:ui/condition"],\
+            ["@ui/image", "workspace:ui/image"],\
+            ["@ui/layout", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#workspace:ui/layout"],\
             ["@ui/text", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#workspace:ui/text"],\
             ["@ui/utils", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#workspace:ui/utils"],\
             ["next", "virtual:ebd3772ae9826bb722a807d90adc30760eb885ba045563a1bb9a6e291c726b03373df324f4dbdd0cdef4b0e759e3f75de742f50471b10e3250d4b77df6cb2c29#npm:12.1.0"],\
@@ -4693,6 +4807,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@app/header-fragment", "virtual:9b1604cf5a2338e9878791f71f65c9aaa2d9d3f75e11ced00c7d675f1ff86381f59938db036e3df12899110ebcb0fb7de4ffed47ac492bd4793e2fe93998fab0#workspace:site/app/fragments/header"],\
             ["@app/hero-fragment", "virtual:9b1604cf5a2338e9878791f71f65c9aaa2d9d3f75e11ced00c7d675f1ff86381f59938db036e3df12899110ebcb0fb7de4ffed47ac492bd4793e2fe93998fab0#workspace:site/app/fragments/hero"],\
             ["@app/interviews-fragment", "virtual:9b1604cf5a2338e9878791f71f65c9aaa2d9d3f75e11ced00c7d675f1ff86381f59938db036e3df12899110ebcb0fb7de4ffed47ac492bd4793e2fe93998fab0#workspace:site/app/fragments/interviews"],\
+            ["@app/journal-fragment", "virtual:9b1604cf5a2338e9878791f71f65c9aaa2d9d3f75e11ced00c7d675f1ff86381f59938db036e3df12899110ebcb0fb7de4ffed47ac492bd4793e2fe93998fab0#workspace:site/app/fragments/journal"],\
             ["@app/main-editor-fragment", "virtual:9b1604cf5a2338e9878791f71f65c9aaa2d9d3f75e11ced00c7d675f1ff86381f59938db036e3df12899110ebcb0fb7de4ffed47ac492bd4793e2fe93998fab0#workspace:site/app/fragments/main-editor"],\
             ["@app/newsletter-fragment", "virtual:9b1604cf5a2338e9878791f71f65c9aaa2d9d3f75e11ced00c7d675f1ff86381f59938db036e3df12899110ebcb0fb7de4ffed47ac492bd4793e2fe93998fab0#workspace:site/app/fragments/newsletter"],\
             ["@app/reviews-fragment", "virtual:9b1604cf5a2338e9878791f71f65c9aaa2d9d3f75e11ced00c7d675f1ff86381f59938db036e3df12899110ebcb0fb7de4ffed47ac492bd4793e2fe93998fab0#workspace:site/app/fragments/reviews"],\
@@ -4723,6 +4838,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@app/header-fragment", "virtual:2765ab5b658a273cceddc3aa386e756fdb0c362073f0ea24df1b5f75ab29bad8af797f5d07004fe263d1e1ea31206dbf7cdcb36be7bbef0d6cff88ab85dbfa25#workspace:site/app/fragments/header"],\
             ["@app/hero-fragment", "virtual:2765ab5b658a273cceddc3aa386e756fdb0c362073f0ea24df1b5f75ab29bad8af797f5d07004fe263d1e1ea31206dbf7cdcb36be7bbef0d6cff88ab85dbfa25#workspace:site/app/fragments/hero"],\
             ["@app/interviews-fragment", "virtual:2765ab5b658a273cceddc3aa386e756fdb0c362073f0ea24df1b5f75ab29bad8af797f5d07004fe263d1e1ea31206dbf7cdcb36be7bbef0d6cff88ab85dbfa25#workspace:site/app/fragments/interviews"],\
+            ["@app/journal-fragment", "virtual:2765ab5b658a273cceddc3aa386e756fdb0c362073f0ea24df1b5f75ab29bad8af797f5d07004fe263d1e1ea31206dbf7cdcb36be7bbef0d6cff88ab85dbfa25#workspace:site/app/fragments/journal"],\
             ["@app/main-editor-fragment", "virtual:2765ab5b658a273cceddc3aa386e756fdb0c362073f0ea24df1b5f75ab29bad8af797f5d07004fe263d1e1ea31206dbf7cdcb36be7bbef0d6cff88ab85dbfa25#workspace:site/app/fragments/main-editor"],\
             ["@app/newsletter-fragment", "virtual:2765ab5b658a273cceddc3aa386e756fdb0c362073f0ea24df1b5f75ab29bad8af797f5d07004fe263d1e1ea31206dbf7cdcb36be7bbef0d6cff88ab85dbfa25#workspace:site/app/fragments/newsletter"],\
             ["@app/reviews-fragment", "virtual:2765ab5b658a273cceddc3aa386e756fdb0c362073f0ea24df1b5f75ab29bad8af797f5d07004fe263d1e1ea31206dbf7cdcb36be7bbef0d6cff88ab85dbfa25#workspace:site/app/fragments/reviews"],\

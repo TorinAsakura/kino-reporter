@@ -14,6 +14,6 @@ const Span = styled('span')(
   color
 )
 
-const Ruble = ({ count = 1 }: RubleProps) => createElement(Span, {}, 'P'.repeat(count))
+const Ruble = ({ count = 1 }: RubleProps) => createElement(Span, {}, '₽'.repeat(count))
 
 export { Ruble }
