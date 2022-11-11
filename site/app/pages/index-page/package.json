@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@app/films-and-serials-fragment": "workspace:0.0.1",
+    "@app/footer-fragment": "workspace:0.0.1",
     "@app/header-fragment": "workspace:0.0.1",
     "@app/hero-fragment": "workspace:0.0.1",
     "@app/interviews-fragment": "workspace:0.0.1",
