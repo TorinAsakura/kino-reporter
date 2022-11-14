@@ -1,6 +1,7 @@
 import React              from 'react'
 import { FC }             from 'react'
 import { Children }       from 'react'
+import { memo }           from 'react'
 import { useMemo }        from 'react'
 import { useEffect }      from 'react'
 import { useState }       from 'react'
@@ -40,7 +41,7 @@ const breakpoints = {
   },
 }
 
-const Cinema: FC<CinemaProps> = ({ selectedTab }) => {
+const Cinema: FC<CinemaProps> = memo(({ selectedTab }) => {
   const { films: filmsData } = useMockedFilms()
   const { films: serialsData } = useMockedFilms()
 
@@ -114,6 +115,6 @@ const Cinema: FC<CinemaProps> = ({ selectedTab }) => {
       </Condition>
     </>
   )
-}
+})
 
 export { Cinema }

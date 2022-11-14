@@ -1,6 +1,6 @@
 export interface TabsProps {
   selectedTab: string
-  toggle: (isOpen: boolean) => void
+  setIsOpen: (isOpen: boolean) => void
   setSelectedTab: (selectedTab: string) => void
 }
 
