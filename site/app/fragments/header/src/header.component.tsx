@@ -1,5 +1,6 @@
 import React                       from 'react'
 import { FC }                      from 'react'
+import { useRouter }               from 'next/router'
 import { useEffect }               from 'react'
 import { useRef }                  from 'react'
 import { useState }                from 'react'
@@ -35,6 +36,7 @@ import { MotionBox }               from './styles'
 
 const Header: FC<HeaderProps> = ({ transparent = false }) => {
   const intl = useIntl()
+  const router = useRouter()
 
   const searchHistory = useSearchHistory()
   const searchValue = useSearchValue()
@@ -57,6 +59,7 @@ const Header: FC<HeaderProps> = ({ transparent = false }) => {
   const handleKeyPress = (event) => {
     if (event.key === 'Enter') {
       addSearchHistoryAction(searchHistory, searchValue)
+      router.push('/search')
     }
   }
 

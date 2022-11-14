@@ -21,7 +21,7 @@ const SearchHistory: FC<SearchHistoryProps> = ({ title, index }) => {
 
   return (
     <Row alignItems='center'>
-      <NextLink variant='secondary' path='/'>
+      <NextLink variant='secondary' path='/search'>
         <Row alignItems='center' onClick={() => updateSearchValueAction(title)}>
           <Layout>
             <RecentIcon width={20} height={20} />

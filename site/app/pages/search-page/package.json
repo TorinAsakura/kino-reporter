@@ -1,0 +1,22 @@
+{
+  "name": "@site/search-page",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@ui/layout": "workspace:0.0.1"
+  },
+  "devDependencies": {
+    "@app/footer-fragment": "workspace:0.0.1",
+    "@app/header-fragment": "workspace:0.0.1",
+    "@app/search-tabs-fragment": "workspace:0.0.1",
+    "next": "12.1.0",
+    "react": "18.2.0",
+    "react-intl": "5.24.3"
+  },
+  "peerDependencies": {
+    "next": "*",
+    "react": "*",
+    "react-intl": "*"
+  }
+}

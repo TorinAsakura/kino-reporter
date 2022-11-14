@@ -778,6 +778,50 @@ const colors = {
         border: 'rgba(10, 10, 11, 0.04)',
       },
     },
+    tabCategoryOff: {
+      default: {
+        background: 'transparent',
+        font: 'rgba(10, 10, 11, 1)',
+        border: 'rgba(10, 10, 11, 0.08)',
+      },
+      hover: {
+        background: 'rgba(10, 10, 11, 0.08)',
+        font: 'rgba(10, 10, 11, 1)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'rgba(10, 10, 11, 0.08)',
+        font: 'rgba(10, 10, 11, 1)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'rgba(172, 173, 183, 1)',
+        font: 'rgba(255, 255, 255, 0.4)',
+        border: 'transparent',
+      },
+    },
+    tabCategoryOn: {
+      default: {
+        background: 'rgba(224, 29, 81, 1)',
+        font: 'rgba(255, 255, 255, 1)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'rgba(224, 29, 81, 1)',
+        font: 'rgba(255, 255, 255, 1)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'rgba(224, 29, 81, 1)',
+        font: 'rgba(255, 255, 255, 1)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'rgba(172, 173, 183, 1)',
+        font: 'rgba(255, 255, 255, 0.4)',
+        border: 'transparent',
+      },
+    },
   },
 }
 

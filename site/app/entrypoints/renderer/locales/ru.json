@@ -31,5 +31,11 @@
   "journal.spring_summer_2022": "Весна-лето 2022",
   "journal.kinoreporter": "Журнал «КиноРепортёр»",
   "journal.buy": "Купить за",
-  "footer.copyright": "© 2022 Кинорепортер. Все права защищены."
+  "footer.copyright": "© 2022 Кинорепортер. Все права защищены.",
+  "tabs.search": "Поиск:",
+  "tabs.matches": "Совпадений",
+  "tabs.all": "Всё",
+  "tabs.materials": "Статьи",
+  "tabs.persons": "Персоны",
+  "tabs.cinema": "Фильмы и сериалы"
 }

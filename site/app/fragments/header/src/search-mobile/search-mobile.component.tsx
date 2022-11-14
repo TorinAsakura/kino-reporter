@@ -1,5 +1,6 @@
 import React                         from 'react'
 import { FC }                        from 'react'
+import { useRouter }                 from 'next/router'
 import { useEffect }                 from 'react'
 import { useIntl }                   from 'react-intl'
 
@@ -23,6 +24,8 @@ import { MotionBox }                 from '../styles'
 const SearchMobile: FC = () => {
   const intl = useIntl()
 
+  const router = useRouter()
+
   const searchValue = useSearchValue()
   const searchHistory = useSearchHistory()
 
@@ -40,6 +43,7 @@ const SearchMobile: FC = () => {
 
   const handleKeyPress = (event) => {
     if (event.key === 'Enter') {
+      router.push('/search')
       addSearchHistoryAction(searchHistory, searchValue)
     }
   }
