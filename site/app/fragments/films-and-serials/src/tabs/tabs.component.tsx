@@ -12,7 +12,7 @@ import { Tab }         from './tabs.interface'
 import { TabsProps }   from './tabs.interface'
 import { getColor }    from './get-color.helper'
 
-const Tabs: FC<TabsProps> = ({ toggle, selectedTab, setSelectedTab }) => {
+const Tabs: FC<TabsProps> = ({ setIsOpen, selectedTab, setSelectedTab }) => {
   const [tabs] = useState<Tab[]>([
     {
       name: 'Кино',
@@ -24,21 +24,23 @@ const Tabs: FC<TabsProps> = ({ toggle, selectedTab, setSelectedTab }) => {
     },
   ])
 
+  const toggle = (id) => {
+    if (selectedTab !== id) {
+      setIsOpen(false)
+      setTimeout(() => {
+        setIsOpen(true)
+      })
+    }
+    setSelectedTab(id)
+  }
+
   return (
     <Row>
       <Layout flexBasis={[16, 16, 0]} />
       {tabs.map(({ name, id }) => (
         <React.Fragment key={id}>
           <Layout>
-            <GhostButton
-              onClick={() => {
-                toggle(false)
-                setTimeout(() => {
-                  toggle(true)
-                })
-                setSelectedTab(id)
-              }}
-            >
+            <GhostButton onClick={() => toggle(id)}>
               <Hover>
                 {(hover, hoverProps) => (
                   <Text

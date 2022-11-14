@@ -21,7 +21,7 @@ const variants = {
 
 const FilmsAndSerials: FC = () => {
   const [selectedTab, setSelectedTab] = useState<string>(ETabs.FILMS)
-  const [isOpen, toggleOpen] = useState<boolean>(true)
+  const [isOpen, setIsOpen] = useState<boolean>(true)
 
   return (
     <MotionBox
@@ -36,7 +36,7 @@ const FilmsAndSerials: FC = () => {
       <Layout flexBasis={[0, 0, 80]} flexShrink={0} />
       <Column fill maxWidth={1280}>
         <Layout flexBasis={[32, 32, 64]} />
-        <Tabs toggle={toggleOpen} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+        <Tabs setIsOpen={setIsOpen} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
         <Layout flexBasis={[20, 20, 32]} />
         <Cinema selectedTab={selectedTab} />
       </Column>
