@@ -10,6 +10,7 @@ const fontSizes = {
   xl: 24,
   large: 28,
   big: 32,
+  largest: 40,
 }
 
 export { fontSizes }

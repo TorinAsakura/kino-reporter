@@ -29,6 +29,8 @@ type ButtonColors =
   | 'social'
   | 'buy'
   | 'fullRounded'
+  | 'tabCategoryOn'
+  | 'tabCategoryOff'
 
 export interface ButtonProps extends BaseButtonProps, LayoutProps, SpaceProps {
   variant?: ButtonColors

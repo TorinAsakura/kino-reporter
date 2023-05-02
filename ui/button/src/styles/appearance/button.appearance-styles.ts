@@ -580,6 +580,54 @@ const appearanceSocialDisabledStyles = createAppearanceStyles({
   borderColor: prop('theme.colors.button.social.disabled.border'),
 })
 
+const appearanceTabCategoryOffDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.tabCategoryOff.default.font'),
+  backgroundColor: prop('theme.colors.button.tabCategoryOff.default.background'),
+  borderColor: prop('theme.colors.button.tabCategoryOff.default.border'),
+})
+
+const appearanceTabCategoryOffHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.tabCategoryOff.hover.font'),
+  backgroundColor: prop('theme.colors.button.tabCategoryOff.hover.background'),
+  borderColor: prop('theme.colors.button.tabCategoryOff.hover.border'),
+})
+
+const appearanceTabCategoryOffPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.tabCategoryOff.pressed.font'),
+  backgroundColor: prop('theme.colors.button.tabCategoryOff.pressed.background'),
+  borderColor: prop('theme.colors.button.tabCategoryOff.pressed.border'),
+})
+
+const appearanceTabCategoryOffDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.tabCategoryOff.disabled.font'),
+  backgroundColor: prop('theme.colors.button.tabCategoryOff.disabled.background'),
+  borderColor: prop('theme.colors.button.tabCategoryOff.disabled.border'),
+})
+
+const appearanceTabCategoryOnDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.tabCategoryOn.default.font'),
+  backgroundColor: prop('theme.colors.button.tabCategoryOn.default.background'),
+  borderColor: prop('theme.colors.button.tabCategoryOn.default.border'),
+})
+
+const appearanceTabCategoryOnHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.tabCategoryOn.hover.font'),
+  backgroundColor: prop('theme.colors.button.tabCategoryOn.hover.background'),
+  borderColor: prop('theme.colors.button.tabCategoryOn.hover.border'),
+})
+
+const appearanceTabCategoryOnPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.tabCategoryOn.pressed.font'),
+  backgroundColor: prop('theme.colors.button.tabCategoryOn.pressed.background'),
+  borderColor: prop('theme.colors.button.tabCategoryOn.pressed.border'),
+})
+
+const appearanceTabCategoryOnDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.tabCategoryOn.disabled.font'),
+  backgroundColor: prop('theme.colors.button.tabCategoryOn.disabled.background'),
+  borderColor: prop('theme.colors.button.tabCategoryOn.disabled.border'),
+})
+
 const appearanceStyles = switchProp(prop('variant', 'primary'), {
   primary: ifProp(
     prop('disabled', false),
@@ -811,6 +859,32 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
       prop('pressed', false),
       appearanceSocialPressedStyles,
       ifProp(prop('hover', false), appearanceSocialHoverStyles, appearanceSocialDefaultStyles)
+    )
+  ),
+  tabCategoryOff: ifProp(
+    prop('disabled', false),
+    appearanceTabCategoryOffDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceTabCategoryOffPressedStyles,
+      ifProp(
+        prop('hover', false),
+        appearanceTabCategoryOffHoverStyles,
+        appearanceTabCategoryOffDefaultStyles
+      )
+    )
+  ),
+  tabCategoryOn: ifProp(
+    prop('disabled', false),
+    appearanceTabCategoryOnDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceTabCategoryOnPressedStyles,
+      ifProp(
+        prop('hover', false),
+        appearanceTabCategoryOnHoverStyles,
+        appearanceTabCategoryOnDefaultStyles
+      )
     )
   ),
 })
